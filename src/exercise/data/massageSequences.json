@@ -1,0 +1,571 @@
+[
+  {
+    "region": "얼굴",
+    "title": "얼굴 기본 이완 시퀀스",
+    "minutes": 10.0,
+    "status": "감수 전 초안",
+    "points": [
+      "찬죽 BL2",
+      "영향 LI20",
+      "지창 ST4",
+      "협거 ST6",
+      "하관 ST7",
+      "태양 EX-HN5"
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "title": "접촉과 준비",
+        "start": "양 손바닥",
+        "end": "양 볼·턱 가장자리",
+        "technique": "정지 접촉",
+        "seconds": 60,
+        "caution": "눈·기도·목 앞쪽 압박 금지"
+      },
+      {
+        "order": 2,
+        "title": "턱선 쓸기",
+        "start": "턱 중앙",
+        "end": "귀 앞 피부 표면",
+        "technique": "가벼운 경찰법",
+        "seconds": 90,
+        "caution": ""
+      },
+      {
+        "order": 3,
+        "title": "볼 쓸기",
+        "start": "입가 옆",
+        "end": "광대 바깥쪽",
+        "technique": "가벼운 경찰법",
+        "seconds": 120,
+        "caution": ""
+      },
+      {
+        "order": 4,
+        "title": "볼 이완",
+        "start": "볼 근육의 바깥 부분",
+        "end": "같은 부위 작은 원",
+        "technique": "손가락 패드 원형 마찰",
+        "seconds": 90,
+        "caution": "강한 압박 금지"
+      },
+      {
+        "order": 5,
+        "title": "이마 쓸기",
+        "start": "미간 위",
+        "end": "관자놀이 앞",
+        "technique": "가벼운 경찰법",
+        "seconds": 90,
+        "caution": ""
+      },
+      {
+        "order": 6,
+        "title": "눈가 주변",
+        "start": "눈썹뼈 바깥쪽",
+        "end": "관자놀이",
+        "technique": "매우 가벼운 쓰다듬기",
+        "seconds": 60,
+        "caution": "안구·눈꺼풀 직접 압박 금지"
+      },
+      {
+        "order": 7,
+        "title": "마무리",
+        "start": "볼 바깥쪽",
+        "end": "턱 가장자리",
+        "technique": "부드러운 경찰법",
+        "seconds": 90,
+        "caution": ""
+      }
+    ]
+  },
+  {
+    "region": "데콜테",
+    "title": "데콜테 기본 이완 시퀀스",
+    "minutes": 8.0,
+    "status": "감수 전 초안",
+    "points": [
+      "전중 CV17",
+      "중부 LU1",
+      "결분 ST12",
+      "견정 GB21"
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "title": "시작 접촉",
+        "start": "어깨 앞",
+        "end": "가슴 윗부분",
+        "technique": "가벼운 접촉",
+        "seconds": 60,
+        "caution": "쇄골 위 오목한 부위 강압 금지"
+      },
+      {
+        "order": 2,
+        "title": "가슴 윗부분",
+        "start": "흉골에서 바깥쪽의 연조직",
+        "end": "어깨 앞쪽",
+        "technique": "부드러운 경찰법",
+        "seconds": 90,
+        "caution": "유방·흉골 직접 압박 피함"
+      },
+      {
+        "order": 3,
+        "title": "어깨 앞 이완",
+        "start": "어깨 앞 근육",
+        "end": "같은 부위 작은 원",
+        "technique": "가벼운 원형 마찰",
+        "seconds": 90,
+        "caution": ""
+      },
+      {
+        "order": 4,
+        "title": "승모근 이완",
+        "start": "목 뒤와 어깨 사이 근육",
+        "end": "어깨 바깥쪽",
+        "technique": "가벼운 유날법",
+        "seconds": 120,
+        "caution": "목 앞·측면 혈관 압박 금지"
+      },
+      {
+        "order": 5,
+        "title": "목 뒤 이완",
+        "start": "후두부 아래 근육",
+        "end": "어깨 뒤쪽",
+        "technique": "가벼운 경찰법",
+        "seconds": 60,
+        "caution": "경추 뼈 압박 금지"
+      },
+      {
+        "order": 6,
+        "title": "마무리",
+        "start": "어깨 바깥쪽",
+        "end": "가슴 윗부분",
+        "technique": "가벼운 쓸기",
+        "seconds": 60,
+        "caution": ""
+      }
+    ]
+  },
+  {
+    "region": "두피",
+    "title": "두피 기본 이완 시퀀스",
+    "minutes": 8.0,
+    "status": "감수 전 초안",
+    "points": [
+      "백회 GV20",
+      "신정 GV24",
+      "풍지 GB20",
+      "천주 BL10",
+      "사신총 EX-HN1"
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "title": "두피 접촉",
+        "start": "정수리 부근",
+        "end": "전체 두피",
+        "technique": "손바닥 가벼운 접촉",
+        "seconds": 60,
+        "caution": ""
+      },
+      {
+        "order": 2,
+        "title": "전두부",
+        "start": "앞머리선",
+        "end": "정수리 방향",
+        "technique": "손가락 패드 작은 원형",
+        "seconds": 90,
+        "caution": "손톱 사용 금지"
+      },
+      {
+        "order": 3,
+        "title": "측두부",
+        "start": "귀 윗부분",
+        "end": "정수리 방향",
+        "technique": "가벼운 원형 압박",
+        "seconds": 90,
+        "caution": ""
+      },
+      {
+        "order": 4,
+        "title": "후두부",
+        "start": "뒤통수 아래 피부",
+        "end": "정수리 방향",
+        "technique": "두피 이동 수법",
+        "seconds": 90,
+        "caution": "목 깊은 압박 금지"
+      },
+      {
+        "order": 5,
+        "title": "정수리",
+        "start": "정수리 주변",
+        "end": "제자리",
+        "technique": "부드러운 압박·이완",
+        "seconds": 60,
+        "caution": ""
+      },
+      {
+        "order": 6,
+        "title": "전체 마무리",
+        "start": "머리 전반",
+        "end": "정수리",
+        "technique": "가벼운 두피 이동",
+        "seconds": 90,
+        "caution": ""
+      }
+    ]
+  },
+  {
+    "region": "등",
+    "title": "등 기본 이완 시퀀스",
+    "minutes": 12.0,
+    "status": "감수 전 초안",
+    "points": [
+      "대추 GV14",
+      "천종 SI11",
+      "폐수 BL13",
+      "간수 BL18",
+      "비수 BL20",
+      "신수 BL23"
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "title": "넓은 도입",
+        "start": "허리 양옆 근육",
+        "end": "등 위쪽",
+        "technique": "넓은 경찰법",
+        "seconds": 120,
+        "caution": "척추뼈 직접 압박 금지"
+      },
+      {
+        "order": 2,
+        "title": "척추 양옆",
+        "start": "척추 양쪽 근육",
+        "end": "견갑골 아래쪽",
+        "technique": "넓은 경찰법",
+        "seconds": 120,
+        "caution": "늑골·척추뼈 강압 금지"
+      },
+      {
+        "order": 3,
+        "title": "견갑 주변",
+        "start": "견갑골 안쪽 근육",
+        "end": "견갑 바깥쪽",
+        "technique": "손바닥 원형 마찰",
+        "seconds": 150,
+        "caution": "견갑골 자체 압박 금지"
+      },
+      {
+        "order": 4,
+        "title": "승모근",
+        "start": "어깨 위 근육",
+        "end": "어깨 바깥쪽",
+        "technique": "부드러운 유날법",
+        "seconds": 120,
+        "caution": "목 앞쪽 피함"
+      },
+      {
+        "order": 5,
+        "title": "등 바깥쪽",
+        "start": "광배근 주변",
+        "end": "옆구리 방향",
+        "technique": "넓은 경찰법",
+        "seconds": 90,
+        "caution": "갈비뼈 아래 신장 부위 깊은 압박 피함"
+      },
+      {
+        "order": 6,
+        "title": "마무리",
+        "start": "등 전체",
+        "end": "허리에서 어깨",
+        "technique": "가벼운 경찰법",
+        "seconds": 120,
+        "caution": ""
+      }
+    ]
+  },
+  {
+    "region": "골반",
+    "title": "골반 기본 이완 시퀀스",
+    "minutes": 8.0,
+    "status": "감수 전 초안",
+    "points": [
+      "명문 GV4",
+      "대장수 BL25",
+      "차료 BL32",
+      "환도 GB30"
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "title": "시작 접촉",
+        "start": "허리 아래 연조직",
+        "end": "골반 윗선",
+        "technique": "가벼운 쓸기",
+        "seconds": 60,
+        "caution": "골반뼈 직접 강압 금지"
+      },
+      {
+        "order": 2,
+        "title": "장골능 위",
+        "start": "허리 바깥쪽 근육",
+        "end": "골반 바깥선",
+        "technique": "경찰법",
+        "seconds": 90,
+        "caution": ""
+      },
+      {
+        "order": 3,
+        "title": "천골 주변",
+        "start": "천골 양옆의 연조직",
+        "end": "같은 부위",
+        "technique": "가벼운 원형 마찰",
+        "seconds": 90,
+        "caution": "천골뼈 직접 강압 금지"
+      },
+      {
+        "order": 4,
+        "title": "골반 옆근육",
+        "start": "허리·둔근 연결부",
+        "end": "엉덩이 바깥쪽",
+        "technique": "가벼운 유날법",
+        "seconds": 120,
+        "caution": "사타구니 강압 금지"
+      },
+      {
+        "order": 5,
+        "title": "골반 바깥",
+        "start": "장골 주변 연조직",
+        "end": "허리 쪽",
+        "technique": "넓은 경찰법",
+        "seconds": 60,
+        "caution": ""
+      },
+      {
+        "order": 6,
+        "title": "마무리",
+        "start": "허리 아래",
+        "end": "골반 옆",
+        "technique": "가벼운 경찰법",
+        "seconds": 60,
+        "caution": ""
+      }
+    ]
+  },
+  {
+    "region": "복부",
+    "title": "복부 기본 이완 시퀀스",
+    "minutes": 7.0,
+    "status": "감수 전 초안",
+    "points": [
+      "중완 CV12",
+      "천추 ST25",
+      "기해 CV6",
+      "관원 CV4"
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "title": "편안한 접촉",
+        "start": "복부 표면",
+        "end": "복부 전체",
+        "technique": "손바닥 정지 접촉",
+        "seconds": 60,
+        "caution": "복통·수술 후·임신 가능성 등은 전문가 확인"
+      },
+      {
+        "order": 2,
+        "title": "넓은 원형 쓸기",
+        "start": "본인 오른쪽 아랫배",
+        "end": "오른쪽 위→왼쪽 위→왼쪽 아래",
+        "technique": "매우 가벼운 시계방향 경찰법",
+        "seconds": 90,
+        "caution": "아픈 곳 강압 금지"
+      },
+      {
+        "order": 3,
+        "title": "대장 경로 따라",
+        "start": "본인 오른쪽 아래",
+        "end": "오른쪽 위→왼쪽→왼쪽 아래",
+        "technique": "약한 원형 쓸기",
+        "seconds": 90,
+        "caution": "깊은 복부 압박 금지"
+      },
+      {
+        "order": 4,
+        "title": "작은 원형 이완",
+        "start": "배꼽 바깥쪽 연조직",
+        "end": "같은 부위",
+        "technique": "가벼운 원형 마찰",
+        "seconds": 60,
+        "caution": "배꼽 직접 강압 금지"
+      },
+      {
+        "order": 5,
+        "title": "넓은 마무리",
+        "start": "복부 전체",
+        "end": "시계방향",
+        "technique": "가벼운 경찰법",
+        "seconds": 60,
+        "caution": ""
+      },
+      {
+        "order": 6,
+        "title": "종료 접촉",
+        "start": "복부 표면",
+        "end": "제자리",
+        "technique": "손바닥 정지 접촉",
+        "seconds": 60,
+        "caution": ""
+      }
+    ]
+  },
+  {
+    "region": "엉덩이",
+    "title": "엉덩이 기본 이완 시퀀스",
+    "minutes": 10.0,
+    "status": "감수 전 초안",
+    "points": [
+      "환도 GB30",
+      "질변 BL54",
+      "거료 GB29"
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "title": "도입",
+        "start": "둔근 바깥쪽",
+        "end": "엉덩이 위쪽",
+        "technique": "넓은 경찰법",
+        "seconds": 90,
+        "caution": ""
+      },
+      {
+        "order": 2,
+        "title": "큰둔근 이완",
+        "start": "둔근 근육 중심",
+        "end": "바깥쪽",
+        "technique": "부드러운 유날법",
+        "seconds": 120,
+        "caution": "좌골·천골 직접 강압 피함"
+      },
+      {
+        "order": 3,
+        "title": "옆 둔근",
+        "start": "엉덩이 측면 근육",
+        "end": "같은 부위",
+        "technique": "손바닥 원형 마찰",
+        "seconds": 120,
+        "caution": "큰 통증 시 즉시 중단"
+      },
+      {
+        "order": 4,
+        "title": "윗 둔근",
+        "start": "장골능 아래 근육",
+        "end": "바깥쪽",
+        "technique": "가벼운 압박·풀기",
+        "seconds": 90,
+        "caution": "신경 주행 부위 깊은 압박 금지"
+      },
+      {
+        "order": 5,
+        "title": "둔근 연결",
+        "start": "엉덩이 아래쪽 연조직",
+        "end": "허벅지 뒤 위쪽",
+        "technique": "넓은 경찰법",
+        "seconds": 90,
+        "caution": ""
+      },
+      {
+        "order": 6,
+        "title": "마무리",
+        "start": "엉덩이 전체",
+        "end": "위쪽 방향",
+        "technique": "부드러운 경찰법",
+        "seconds": 90,
+        "caution": ""
+      }
+    ]
+  },
+  {
+    "region": "다리",
+    "title": "다리 기본 이완 시퀀스",
+    "minutes": 12.0,
+    "status": "감수 전 초안",
+    "points": [
+      "족삼리 ST36",
+      "삼음교 SP6",
+      "양릉천 GB34",
+      "음릉천 SP9",
+      "위중 BL40",
+      "승산 BL57",
+      "태계 KI3"
+    ],
+    "steps": [
+      {
+        "order": 1,
+        "title": "발과 발목",
+        "start": "발등·발목 주변",
+        "end": "종아리 아래쪽",
+        "technique": "가벼운 경찰법",
+        "seconds": 90,
+        "caution": ""
+      },
+      {
+        "order": 2,
+        "title": "종아리 넓게",
+        "start": "발목 위 근육",
+        "end": "무릎 아래",
+        "technique": "넓은 경찰법",
+        "seconds": 120,
+        "caution": "혈전 의심·한쪽 다리 붓기·열감이면 마사지 금지"
+      },
+      {
+        "order": 3,
+        "title": "종아리 근육",
+        "start": "종아리 뒤쪽 근육",
+        "end": "무릎 아래까지만",
+        "technique": "가벼운 유날법",
+        "seconds": 120,
+        "caution": "무릎 뒤 오금 직접 압박 금지"
+      },
+      {
+        "order": 4,
+        "title": "허벅지 앞",
+        "start": "무릎 위 근육",
+        "end": "허벅지 중간~위쪽",
+        "technique": "넓은 경찰법",
+        "seconds": 120,
+        "caution": "사타구니 직접 압박 금지"
+      },
+      {
+        "order": 5,
+        "title": "허벅지 바깥",
+        "start": "허벅지 외측 근육",
+        "end": "엉덩이 아래",
+        "technique": "가벼운 유날법",
+        "seconds": 120,
+        "caution": "정맥류·멍 위 강압 금지"
+      },
+      {
+        "order": 6,
+        "title": "허벅지 뒤",
+        "start": "무릎 위 근육",
+        "end": "둔근 아래",
+        "technique": "넓은 경찰법",
+        "seconds": 90,
+        "caution": ""
+      },
+      {
+        "order": 7,
+        "title": "전체 마무리",
+        "start": "발목 주변",
+        "end": "허벅지 위쪽 근육",
+        "technique": "가벼운 경찰법",
+        "seconds": 60,
+        "caution": ""
+      }
+    ]
+  }
+]
