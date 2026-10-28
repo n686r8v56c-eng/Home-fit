@@ -1,5 +1,5 @@
 const bounded=(n,fallback)=>Number.isFinite(Number(n))&&Number(n)>0?Math.min(86400,Number(n)):fallback;
-export const activityKind=activity=>/마사지|폼롤러/.test(activity)?'skin':/요가|스트레칭|골반/.test(activity)?'stretch':'workout';
+export const activityKind = activity => activity === '마사지' ? 'skin' : ['요가', 'SNPE', '매트 필라테스', '골반순환', '스트레칭', '폼롤러'].includes(activity) ? 'stretch' : 'workout';
 export function makeSequence({id,name,title,activity,items,steps,bpm=30,language='ko',...extra}){
  const source=items||steps||[];
  const normalized=source.map((item,index)=>({...item,
