@@ -45,3 +45,18 @@
 .overlay{z-index:200}.overlay .sheet{position:relative;z-index:201;max-height:calc(100dvh - 15px);padding-bottom:max(30px,env(safe-area-inset-bottom));overscroll-behavior:contain}
 .overlay:focus-within{align-items:flex-start;overflow-y:auto;padding-top:12px}.overlay:focus-within .sheet{flex:0 0 auto;max-height:calc(100dvh - 24px);overflow-y:auto;border-radius:20px;margin:0 auto}.sheet .primary{flex-shrink:0}.sheet input:focus,.sheet textarea:focus{scroll-margin-bottom:170px}
 @supports(height:100svh){.overlay:focus-within .sheet{max-height:calc(100svh - 24px)}}
+
+/* Folder editor: keep a working save action visible with the mobile keyboard */
+.folder-modal-overlay{align-items:center;padding:16px;overflow-y:auto;}
+.folder-modal-overlay .folder-modal-sheet{width:min(100%,580px);max-height:min(88dvh,640px);overflow-y:auto;margin:auto;border-radius:23px;padding:22px 20px max(24px,env(safe-area-inset-bottom));gap:18px;}
+.folder-modal-overlay:focus-within{align-items:center;padding:16px;overflow-y:auto;}
+.folder-modal-overlay:focus-within .folder-modal-sheet{flex:0 1 auto;margin:auto;max-height:min(88dvh,640px);border-radius:23px;}
+.folder-modal-head-actions{display:flex;gap:10px;align-items:center;}
+.folder-head-save{border:0;background:#ad769e;color:#fff;border-radius:11px;padding:9px 13px;font-size:14px;font-weight:700;}
+.folder-head-save:disabled,.folder-bottom-save:disabled{opacity:.45;}
+.folder-feedback{color:#bd4469;margin:0;font-size:13px;}
+.folder-modal-sheet label{flex-shrink:0;}
+@media(max-height:550px){.folder-modal-overlay,.folder-modal-overlay:focus-within{align-items:flex-start;padding:8px}.folder-modal-overlay .folder-modal-sheet,.folder-modal-overlay:focus-within .folder-modal-sheet{margin:0 auto;max-height:calc(100dvh - 16px);padding:13px 16px;gap:10px}}
+
+/* Main category memo selector */
+.memo-type-label{display:flex;align-items:center;justify-content:space-between;gap:12px;color:#82698b;font-size:13px;font-weight:650}.memo-type-label select{flex:1;max-width:75%;min-height:42px;border-radius:12px;border:1px solid #e5d7e7;background:#f8f1f8;padding:9px;color:#493e4d}
