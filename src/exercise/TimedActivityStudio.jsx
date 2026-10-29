@@ -59,7 +59,7 @@ export default function TimedActivityStudio({ activity, NatureSounds = null, leg
   const favorites = data.favorites || {}; // Legacy: retained for compatibility, no longer shown
   const videoBookmarks = data.videoBookmarks || [];
   const [tab,setTab] = useState('library');
-  const [major,setMajor] = useState(Object.keys(STRUCTURE)[0]);
+  const [major,setMajor] = useState('전체');
   const [search,setSearch] = useState('');
   const [activeTag,setActiveTag] = useState('전체');
   const [editing,setEditing] = useState(null);
@@ -129,7 +129,7 @@ export default function TimedActivityStudio({ activity, NatureSounds = null, leg
   const clearEdit=()=>{setEditing(null);setForm({name:'',description:'',seconds:60,tags:'',image:''});};
   const saveExercise=()=>{
     if(!form.name.trim())return alert('운동명을 입력해줘.');
-    const exercise={...form,id:editing&&editing!=='new'?editing:uid(),name:form.name.trim(),seconds:clamp(form.seconds),major:editing&&editing!=='new'?(exercises.find(x=>x.id===editing)?.major||major):major,tags:String(form.tags).split(',').map(x=>x.trim().replace(/^#/, '')).filter(Boolean)};
+    const exercise={...form,id:editing&&editing!=='new'?editing:uid(),name:form.name.trim(),seconds:clamp(form.seconds),major:editing&&editing!=='new'?(exercises.find(x=>x.id===editing)?.major||major):(major==='전체'?Object.keys(STRUCTURE)[0]:major),tags:String(form.tags).split(',').map(x=>x.trim().replace(/^#/, '')).filter(Boolean)};
     update({exercises:editing&&editing!=='new'?exercises.map(x=>x.id===editing?exercise:x):[...exercises,exercise]});clearEdit();
   };
   const editExercise=x=>{setMajor(x.major);setEditing(x.id);setForm({...x,tags:x.tags.join(', ')});};
@@ -202,7 +202,7 @@ export default function TimedActivityStudio({ activity, NatureSounds = null, leg
     const obj={id:loadedId||uid(),name:sequenceName.trim(),items:draft.map(x=>({...x}))};
     update({saved:loadedId?saved.map(x=>x.id===loadedId?obj:x):[...saved,obj]});setLoadedId(obj.id);
   };
-  const tagged=exercises.filter(x=>(Object.hasOwn(STRUCTURE,x.major)?x.major:'미분류')===major||(activity==='요가'&&x.tags?.includes(major)));
+  const tagged=exercises.filter(x=>major==='전체'||(Object.hasOwn(STRUCTURE,x.major)?x.major:'미분류')===major||(activity==='요가'&&x.tags?.includes(major)));
   const tags=[...new Set(tagged.flatMap(x=>x.tags||[]))];
   const filtered=tagged.filter(x=>(activeTag==='전체'||x.tags?.includes(activeTag))&&`${x.name} ${x.description} ${(x.tags||[]).join(' ')}`.toLowerCase().includes(search.toLowerCase()));
   const current=playIndex>=0?draft[playIndex]:null;
@@ -216,10 +216,10 @@ export default function TimedActivityStudio({ activity, NatureSounds = null, leg
     <div style={{pointerEvents:cloudReady?'auto':'none',opacity:cloudReady?1:0.65}} aria-busy={!cloudReady}>
     <div style={{display:'grid',gridTemplateColumns:'repeat(3,1fr)',gap:8,marginBottom:18}}>{[['sequence','시퀀스'],['library',<>운동<br/>라이브러리</>],['bookmarks','북마크']].map(([key,name])=><button key={key} onClick={()=>setTab(key)} style={{...btn,background:tab===key?'#e7dcf1':'#fff',minHeight:62,fontWeight:600}}>{name}</button>)}</div>
     {tab==='library' && <>
-      <div style={{display:'flex',gap:8,marginBottom:10}}><select style={field} value={major} onChange={e=>{setMajor(e.target.value);setActiveTag('전체');}}>{Object.keys(STRUCTURE).map(x=><option key={x}>{x}</option>)}</select></div>
+      <div style={{display:'flex',gap:8,marginBottom:10}}><select style={field} value={major} onChange={e=>{setMajor(e.target.value);setActiveTag('전체');}}>{['전체',...Object.keys(STRUCTURE)].map(x=><option key={x}>{x}</option>)}</select></div>
       <input className="pelvic-input" value={search} onChange={e=>setSearch(e.target.value)} style={{...field,marginBottom:10}} placeholder="운동명 · 설명 · 태그 검색"/>
       <div style={{display:'flex',gap:6,flexWrap:'wrap',marginBottom:12}}>{['전체',...tags].map(t=><button key={t} style={{...btn,padding:'5px 9px',borderRadius:40,background:activeTag===t?'#e4d3f1':'#fff'}} onClick={()=>setActiveTag(t)}>{t==='전체'?t:`#${t}`}</button>)}</div>
-      <button style={{...btn,marginBottom:12}} onClick={()=>editing?clearEdit():setEditing('new')}>＋ 새 동작 등록</button>
+      <button style={{...btn,marginBottom:12}} onClick={()=>{if(editing){clearEdit();return;}if(major==='전체'){setMajor(Object.keys(STRUCTURE)[0]);}setEditing('new');}}>＋ 새 동작 등록</button>
       {editing && <div style={{...card,marginBottom:14,display:'grid',gap:10}}><strong>{editing==='new'?`${major} 동작 등록`:'운동 수정'}</strong><input className="pelvic-input" style={field} placeholder="동작명" value={form.name} onChange={e=>setForm({...form,name:e.target.value})}/><textarea className="pelvic-input" style={{...field,minHeight:76}} placeholder="설명 / 주의사항 (선택)" value={form.description} onChange={e=>setForm({...form,description:e.target.value})}/><label>기본 시간 (초)<input className="pelvic-input" style={field} type="number" min="1" max="3600" value={form.seconds} onChange={e=>setForm({...form,seconds:e.target.value})}/></label><input className="pelvic-input" style={field} placeholder="태그: 초급, 힙업, 누워서" value={form.tags} onChange={e=>setForm({...form,tags:e.target.value})}/><div><button style={btn} onClick={saveExercise}>저장</button> <button style={btn} onClick={clearEdit}>취소</button></div></div>}
       <div style={{display:'grid',gridTemplateColumns:'repeat(2,minmax(0,1fr))',gap:10}}>{filtered.map(x=><div key={x.id} style={card} className="pelvic-card"><label title={`${x.name} 사진 추가 또는 변경`} style={{aspectRatio:'4/3',background:'#f8f3fb',borderRadius:14,overflow:'hidden',display:'grid',placeItems:'center',cursor:'pointer',position:'relative'}}>
         {x.image?<img src={x.image} alt={x.name} style={{width:'100%',height:'100%',objectFit:'cover'}}/>:<span style={{color:'#b5a3c2'}}>＋ 사진</span>}
