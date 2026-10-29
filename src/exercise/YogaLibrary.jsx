@@ -1,3 +1,4 @@
+import {getVoiceVolume} from './SequenceMetronome';
 import SequenceMetronome from './SequenceMetronome';
 import TimedActivityStudio from './TimedActivityStudio';
 import EquipmentStudio from './EquipmentStudio';
@@ -261,12 +262,12 @@ function YogaContent(){
     window.speechSynthesis.cancel();const utter=new SpeechSynthesisUtterance(`${step.name}${step.side?' '+step.side:''}`);utter.lang='ko-KR';utter.rate=1;utter.onend=()=>{if(!cancelled)setIntroDone(true)};utter.onerror=()=>{if(!cancelled)setIntroDone(true)};
     // Avoid browser TTS hanging forever when a voice is not present.
     const fallback=setTimeout(()=>{if(!cancelled)setIntroDone(true)},5000);
-    window.speechSynthesis.speak(utter);
+    (utter.volume=getVoiceVolume(),window.speechSynthesis.speak(utter));
     return()=>{cancelled=true;clearTimeout(fallback);window.speechSynthesis.cancel()};
   },[player?.index,playing,player?.steps]);
   useEffect(()=>{if(!player||!playing||!introDone||bpm===0)return;const duration=60000/bpm;
     const timer=setTimeout(()=>{const number=player.beat+1;
-      if('speechSynthesis' in window){const ko=['하나','둘','셋','넷','다섯','여섯','일곱','여덟'];const zh=['一','二','三','四','五','六','七','八'];const raw=(countLanguage==='zh'?zh:ko)[(number-1)%8];const count=new SpeechSynthesisUtterance(raw);count.lang=countLanguage==='zh'?'zh-CN':'ko-KR';count.rate=0.85;window.speechSynthesis.speak(count)}
+      if('speechSynthesis' in window){const ko=['하나','둘','셋','넷','다섯','여섯','일곱','여덟'];const zh=['一','二','三','四','五','六','七','八'];const raw=(countLanguage==='zh'?zh:ko)[(number-1)%8];const count=new SpeechSynthesisUtterance(raw);count.lang=countLanguage==='zh'?'zh-CN':'ko-KR';count.rate=0.85;(count.volume=getVoiceVolume(),window.speechSynthesis.speak(count))}
       const step=player.steps[player.index];if(number>=step.beats){if(player.index+1>=player.steps.length){setPlaying(false);setPlayer(null)}else{setPlayer(p=>p?{...p,index:p.index+1,beat:0}:null);setIntroDone(false)}}else setPlayer(p=>p?{...p,beat:number}:null)
     },duration);return()=>clearTimeout(timer);
   },[player?.beat,player?.index,playing,introDone,bpm,countLanguage]);

@@ -1,7 +1,7 @@
 import React,{useEffect,useRef,useState} from 'react';
 
 // 사용자 확인 사운드 이름 / 실제 음원 파일명
-const TRACKS=[
+export const TRACKS=[
   {src:'',label:'선택 안 함'},
   {src:'/audio/audio-15.mp3',label:'조용한 물'},
   {src:'/audio/audio-17.mp3',label:'큰 물소리'},

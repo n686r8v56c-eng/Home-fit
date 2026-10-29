@@ -1,3 +1,4 @@
+import {getVoiceVolume} from './SequenceMetronome';
 import SequenceMetronome from './SequenceMetronome';
 import FoamRollerBookmarks from './FoamRollerBookmarks';
 import {ScheduleButton,useExercise} from './ExerciseContext';
@@ -60,7 +61,7 @@ function FoamRollerSequences({items}){
    const voices=window.speechSynthesis.getVoices();
    const korean=voices.find(v=>v.lang?.toLowerCase()==='ko-kr')||voices.find(v=>v.lang?.toLowerCase().startsWith('ko'));
    if(korean)utter.voice=korean;
-   window.speechSynthesis.speak(utter);
+   (utter.volume=getVoiceVolume(),window.speechSynthesis.speak(utter));
  };
  // Reset spoken state whenever a new preset is selected or a sequence is stopped.
  useEffect(()=>()=>{if(typeof window!=='undefined'&&'speechSynthesis'in window)window.speechSynthesis.cancel()},[]);

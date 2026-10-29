@@ -1,3 +1,4 @@
+import {getVoiceVolume} from './SequenceMetronome';
 import SequenceMetronome from './SequenceMetronome';
 import {ScheduleButton,useExercise} from './ExerciseContext';
 import React,{useEffect,useRef,useState} from 'react';
@@ -33,7 +34,7 @@ const lymphRegionFromFileName=(name)=>{
  try {const decoded=decodeURIComponent(stem);return LYMPH_REGION_KEYS[decoded]?decoded:null;} catch {return null;}
 };
 
-function announce(t){try{if(!('speechSynthesis'in window))return;window.speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(t);u.lang='ko-KR';u.rate=.88;u.volume=.8;window.speechSynthesis.speak(u)}catch{}}
+function announce(t){try{if(!('speechSynthesis'in window))return;window.speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(t);u.lang='ko-KR';u.rate=.88;u.volume=.8;(u.volume=getVoiceVolume(),window.speechSynthesis.speak(u))}catch{}}
 export default function MassageLibrary(){
  const [region,setRegion]=useState(null),[tab,setTab]=useState('sequence'),[muscleSearch,setMuscleSearch]=useState(''),[index,setIndex]=useState(0),[remaining,setRemaining]=useState(0),[running,setRunning]=useState(false),[finished,setFinished]=useState(false);
  const timer=useRef(null),deadline=useRef(0),stepRef=useRef(0),seqRef=useRef(null);

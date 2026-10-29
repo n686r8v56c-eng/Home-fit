@@ -1,3 +1,4 @@
+import {getVoiceVolume} from './SequenceMetronome';
 import SequenceMetronome from './SequenceMetronome';
 import {Folder} from 'lucide-react';
 import {ScheduleButton,useExercise} from './ExerciseContext';
@@ -85,7 +86,7 @@ export default function PelvicStudio({ NatureSounds = null }) {
     speechSynthesis.cancel();
     const s=new SpeechSynthesisUtterance(sentence);s.lang='ko-KR';s.rate=1.05;s.volume=1;
     const voices=speechSynthesis.getVoices();s.voice=voices.find(v=>v.lang?.toLowerCase().startsWith('ko'))||null;
-    speechSynthesis.speak(s);
+    (s.volume=getVoiceVolume(),speechSynthesis.speak(s));
   };
   const stop=()=>{setPlayIndex(-1);indexRef.current=-1;playRef.current=false;setRemain(0);if(typeof speechSynthesis!=='undefined') speechSynthesis.cancel();spoken.current.clear();};
   const go=(i,items=draftRef.current)=>{
