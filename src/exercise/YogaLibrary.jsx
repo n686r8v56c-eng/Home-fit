@@ -1,3 +1,4 @@
+import TimedActivityStudio from './TimedActivityStudio';
 import EquipmentStudio from './EquipmentStudio';
 import {ScheduleButton,useExercise} from './ExerciseContext';
 import React,{useMemo,useState,useEffect,useRef} from 'react';
@@ -370,11 +371,12 @@ export default function YogaLibrary(){
     <div>
       <button type="button" onClick={()=>setActivity(null)} style={{display:'inline-flex',alignItems:'center',gap:7,margin:'4px 0 14px',padding:'10px 15px',border:'1px solid #e7ddec',borderRadius:12,background:'#fff',color:'#775a8f',fontWeight:700,cursor:'pointer'}}>‹ 전체 운동</button>
       {activity==='마사지' ? <MassageLibrary/>
+        : ['스트레칭','매트 필라테스'].includes(activity) ? <TimedActivityStudio key={activity} activity={activity}/>
         : activity==='골반순환' ? <PelvicStudio/>
         : activity==='맨몸근력' ? <BodyweightStudio/>
         : ['바벨','덤벨','머신'].includes(activity) ? <EquipmentStudio key={activity} activity={activity}/>
         : <ActivityStudio activity={activity}/>}
-      {!['골반순환','맨몸근력','바벨','덤벨','머신'].includes(activity)&&<NatureSound />}
+      {!['골반순환','맨몸근력','바벨','덤벨','머신','스트레칭','매트 필라테스'].includes(activity)&&<NatureSound />}
     </div>
   );
   return (
