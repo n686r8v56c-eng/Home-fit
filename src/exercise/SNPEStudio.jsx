@@ -1,3 +1,4 @@
+import {speakVoice,stopVoice} from './sequenceSpeech.mjs';
 import {getVoiceVolume} from './SequenceMetronome';
 import SequenceMetronome,{useFinalCountdown} from './SequenceMetronome';
 import {ScheduleButton,useExercise} from './ExerciseContext';
@@ -28,7 +29,7 @@ export default function SNPEStudio(){
  const jump=next=>{if(next>=steps.length){setRunning(false);setFinished(true);setRemaining(0);return;}setActiveIndex(next);setRemaining(steps[next].seconds||60);setFinished(false);setRunning(true)};
  useFinalCountdown({active:running,remaining,step:activeIndex,voice});
  const activeStep=steps[activeIndex];
- useEffect(()=>{if(!running||!voice||!activeStep||typeof speechSynthesis==='undefined')return;speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(`${activeStep.side&&activeStep.side!=='기본'?activeStep.side+' ':''}${activeStep.name}, 시작합니다.`);u.lang='ko-KR';(u.volume=getVoiceVolume(),speechSynthesis.speak(u));return()=>speechSynthesis.cancel()},[running,voice,activeIndex,activeStep?.name,activeStep?.side]);
+ useEffect(()=>{if(!running||!voice||!activeStep||typeof speechSynthesis==='undefined')return;stopVoice();const u=new SpeechSynthesisUtterance(`${activeStep.side&&activeStep.side!=='기본'?activeStep.side+' ':''}${activeStep.name}, 시작합니다.`);u.lang='ko-KR';(u.volume=getVoiceVolume(),speakVoice(u));return()=>stopVoice()},[running,voice,activeIndex,activeStep?.name,activeStep?.side]);
  const persist=async(next={})=>{if(!user)throw Error('로그인 정보가 없어.');const state={moves,books,steps,saved,seqName,...next};setSaving(true);try{const {error}=await yogaSupabase.from('mindflow_snpe_studio').upsert({user_id:user.id,data:state,updated_at:new Date().toISOString()},{onConflict:'user_id'});if(error)throw error;setMoves(state.moves);setBooks(state.books);setSteps(state.steps);setSaved(state.saved);setSeqName(state.seqName);setErr('')}catch(e){setErr('저장 실패: '+e.message);throw e}finally{setSaving(false)}};
  const pushStep=m=>persist({steps:[...steps,{...m,stepId:uid(),seconds:m.seconds||60,side:m.side||'기본'}]}).catch(()=>{});
  const rearrange=(index,offset)=>{let to=index+offset;if(to<0||to>=steps.length)return;const a=[...steps];[a[index],a[to]]=[a[to],a[index]];persist({steps:a}).catch(()=>{})};

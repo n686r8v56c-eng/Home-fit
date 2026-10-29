@@ -1,3 +1,4 @@
+import {speakVoice,stopVoice} from './sequenceSpeech.mjs';
 import React,{useEffect,useRef,useState} from 'react';
 import {createPortal} from 'react-dom';
 let voiceVolume=1;
@@ -13,7 +14,7 @@ function beatWave(bpm){
 export default function SequenceMetronome({active}){
  const [bpm,setBpm]=useState(30),[enabled,setEnabled]=useState(true),[blocked,setBlocked]=useState(false),[volume,setVolume]=useState(.8),[speechLevel,setSpeechLevel]=useState(voiceVolume);
  const media=useRef(null),wanted=useRef(false),level=useRef(volume);wanted.current=active&&enabled;level.current=volume;
- const start=()=>{if(!wanted.current||!media.current)return;try{if(navigator.audioSession)navigator.audioSession.type='playback';media.current.volume=level.current;media.current.muted=false;const result=media.current.play();result?.then(()=>setBlocked(false)).catch(()=>setBlocked(true))}catch{setBlocked(true)}};
+ const start=()=>{if(!wanted.current||!media.current)return;try{media.current.volume=level.current;media.current.muted=false;if(!media.current.paused)return;const result=media.current.play();result?.then(()=>setBlocked(false)).catch(()=>setBlocked(true))}catch{setBlocked(true)}};
  useEffect(()=>{const el=new Audio();el.loop=true;el.preload='auto';el.setAttribute('playsinline','');media.current=el;
  const unlock=()=>start();document.addEventListener('pointerdown',unlock,true);document.addEventListener('touchend',unlock,true);
  return()=>{wanted.current=false;document.removeEventListener('pointerdown',unlock,true);document.removeEventListener('touchend',unlock,true);el.pause();el.removeAttribute('src');el.load();media.current=null};},[]);
@@ -24,5 +25,5 @@ export default function SequenceMetronome({active}){
 }
 export function useFinalCountdown({active,remaining,step,voice=true,enabled=true}){
  const spoken=useRef(new Set());const lastStep=useRef(step);
- useEffect(()=>{if(lastStep.current!==step||remaining>5){spoken.current.clear();lastStep.current=step;}if(!active||!voice||!enabled||remaining<1||remaining>5||spoken.current.has(remaining)||typeof speechSynthesis==='undefined')return;spoken.current.add(remaining);speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(['','일','이','삼','사','오'][remaining]);u.lang='ko-KR';u.rate=1.1;(u.volume=getVoiceVolume(),speechSynthesis.speak(u))},[active,remaining,step,voice,enabled]);
+ useEffect(()=>{if(lastStep.current!==step||remaining>5){spoken.current.clear();lastStep.current=step;}if(!active||!voice||!enabled||remaining<1||remaining>5||spoken.current.has(remaining)||typeof speechSynthesis==='undefined')return;spoken.current.add(remaining);stopVoice();const u=new SpeechSynthesisUtterance(['','일','이','삼','사','오'][remaining]);u.lang='ko-KR';u.rate=1.1;(u.volume=getVoiceVolume(),speakVoice(u))},[active,remaining,step,voice,enabled]);
 }

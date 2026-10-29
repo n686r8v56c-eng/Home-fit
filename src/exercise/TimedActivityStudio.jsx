@@ -1,3 +1,4 @@
+import {speakVoice,stopVoice} from './sequenceSpeech.mjs';
 import {getVoiceVolume} from './SequenceMetronome';
 import SequenceMetronome from './SequenceMetronome';
 import ActivityStudio from './ActivityStudio';
@@ -85,12 +86,12 @@ export default function TimedActivityStudio({ activity, NatureSounds = null }) {
   const update = patch => {if(!cloudReady)return;dirtyRef.current=true;setData(d=>({...d,...(typeof patch==='function'?patch(d):patch)}));};
   const voiceSay = (sentence) => {
     if(!voice || typeof speechSynthesis==='undefined') return;
-    speechSynthesis.cancel();
+    stopVoice();
     const s=new SpeechSynthesisUtterance(sentence);s.lang='ko-KR';s.rate=1.05;s.volume=1;
     const voices=speechSynthesis.getVoices();s.voice=voices.find(v=>v.lang?.toLowerCase().startsWith('ko'))||null;
-    (s.volume=getVoiceVolume(),speechSynthesis.speak(s));
+    (s.volume=getVoiceVolume(),speakVoice(s));
   };
-  const stop=()=>{setPlayIndex(-1);indexRef.current=-1;playRef.current=false;setRemain(0);if(typeof speechSynthesis!=='undefined') speechSynthesis.cancel();spoken.current.clear();};
+  const stop=()=>{setPlayIndex(-1);indexRef.current=-1;playRef.current=false;setRemain(0);if(typeof speechSynthesis!=='undefined') stopVoice();spoken.current.clear();};
   const go=(i,items=draftRef.current)=>{
     if(i<0 || i>=items.length){stop();return;}
     const x=items[i];const n=clamp(x.seconds);
@@ -259,7 +260,7 @@ export default function TimedActivityStudio({ activity, NatureSounds = null }) {
       </div>
     </div>}
     <details style={{marginTop:20}}><summary>기존 프리셋 · 기본 동작 가져오기</summary><ActivityStudio activity={activity}/></details>
-    {current&&<div role="dialog" aria-modal="true" aria-label={`${activity} 시퀀스 재생`} style={{position:'fixed',inset:0,zIndex:9999,background:'rgba(38,28,49,.65)',display:'flex',alignItems:'center',justifyContent:'center',padding:16,animation:'pelvicFade .2s'}}><div style={{...card,maxWidth:450,width:'100%',maxHeight:'95vh',overflowY:'auto',padding:20,borderRadius:25}}><div style={{display:'flex',justifyContent:'space-between',alignItems:'center',marginBottom:15}}><b>{activity} 시퀀스 재생 · {playIndex+1}/{draft.length}</b><button onClick={stop} style={{...btn,background:'white'}}>✕</button></div><div style={{height:240,background:'#f8f4fb',borderRadius:15,overflow:'hidden',display:'grid',placeItems:'center'}}>{current.image?<img src={current.image} alt={current.name} style={{width:'100%',height:'100%',objectFit:'contain'}}/>:<span>등록한 운동 사진이 여기에 표시돼</span>}</div><h2 style={{textAlign:'center',margin:'16px 0 8px'}}>{current.side&&current.side!=='기본'?current.side+' ':''}{current.name}</h2><div style={{fontSize:62,fontWeight:700,textAlign:'center',fontVariantNumeric:'tabular-nums'}}>{secs(remain)}</div><p style={{textAlign:'center',color:'#9687a0',fontSize:13}}>남은 시간 · 한국어 음성 안내</p><label style={{display:'flex',gap:6,justifyContent:'center',fontSize:13,marginBottom:12}}><input type="checkbox" checked={voice} onChange={e=>setVoice(e.target.checked)}/> 한국어 음성 안내</label><div style={{display:'flex',justifyContent:'center',gap:6,flexWrap:'wrap'}}><button style={btn} disabled={playIndex===0} onClick={()=>go(playIndex-1)}>◀ 이전</button><button style={btn} onClick={()=>{setPaused(v=>!v);if(typeof speechSynthesis!=='undefined') speechSynthesis.cancel();}}>{paused?'▶ 재개':'Ⅱ 일시정지'}</button><button style={btn} onClick={()=>go(playIndex+1)}>다음 ▶</button><button style={btn} onClick={stop}>종료</button></div></div></div>}
+    {current&&<div role="dialog" aria-modal="true" aria-label={`${activity} 시퀀스 재생`} style={{position:'fixed',inset:0,zIndex:9999,background:'rgba(38,28,49,.65)',display:'flex',alignItems:'center',justifyContent:'center',padding:16,animation:'pelvicFade .2s'}}><div style={{...card,maxWidth:450,width:'100%',maxHeight:'95vh',overflowY:'auto',padding:20,borderRadius:25}}><div style={{display:'flex',justifyContent:'space-between',alignItems:'center',marginBottom:15}}><b>{activity} 시퀀스 재생 · {playIndex+1}/{draft.length}</b><button onClick={stop} style={{...btn,background:'white'}}>✕</button></div><div style={{height:240,background:'#f8f4fb',borderRadius:15,overflow:'hidden',display:'grid',placeItems:'center'}}>{current.image?<img src={current.image} alt={current.name} style={{width:'100%',height:'100%',objectFit:'contain'}}/>:<span>등록한 운동 사진이 여기에 표시돼</span>}</div><h2 style={{textAlign:'center',margin:'16px 0 8px'}}>{current.side&&current.side!=='기본'?current.side+' ':''}{current.name}</h2><div style={{fontSize:62,fontWeight:700,textAlign:'center',fontVariantNumeric:'tabular-nums'}}>{secs(remain)}</div><p style={{textAlign:'center',color:'#9687a0',fontSize:13}}>남은 시간 · 한국어 음성 안내</p><label style={{display:'flex',gap:6,justifyContent:'center',fontSize:13,marginBottom:12}}><input type="checkbox" checked={voice} onChange={e=>setVoice(e.target.checked)}/> 한국어 음성 안내</label><div style={{display:'flex',justifyContent:'center',gap:6,flexWrap:'wrap'}}><button style={btn} disabled={playIndex===0} onClick={()=>go(playIndex-1)}>◀ 이전</button><button style={btn} onClick={()=>{setPaused(v=>!v);if(typeof speechSynthesis!=='undefined') stopVoice();}}>{paused?'▶ 재개':'Ⅱ 일시정지'}</button><button style={btn} onClick={()=>go(playIndex+1)}>다음 ▶</button><button style={btn} onClick={stop}>종료</button></div></div></div>}
     </div>
   </div>;
 }

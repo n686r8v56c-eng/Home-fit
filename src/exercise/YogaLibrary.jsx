@@ -1,3 +1,4 @@
+import {speakVoice,stopVoice} from './sequenceSpeech.mjs';
 import {getVoiceVolume} from './SequenceMetronome';
 import SequenceMetronome from './SequenceMetronome';
 import TimedActivityStudio from './TimedActivityStudio';
@@ -247,7 +248,7 @@ function YogaContent(){
   };
   useEffect(()=>{exercise.onLocalChange(old=>({...old,sequences:saved}));},[saved]);
   useEffect(()=>{exercise.onLocalChange(old=>({...old,presets:customPresets}));},[customPresets]);
-  useEffect(()=>()=>{if('speechSynthesis' in window)window.speechSynthesis.cancel()},[]);
+  useEffect(()=>()=>{if('speechSynthesis' in window)stopVoice()},[]);
   const presetItems=useMemo(()=>BASE_PRESETS.map(p=>({...p,builtin:true,items:p.names.map(name=>poses.find(x=>x.sanskrit===name)).filter(Boolean).map(x=>({poseId:x.id,beats:x.defaultBeats||8,side:x.sideMode==='selectable'?'양쪽':'기본'}))})),[poses]);
   const allPresets=[...presetItems,...customPresets];
   const appendPreset=p=>{setDraft(prev=>[...prev,...p.items.filter(x=>poses.some(z=>z.id===x.poseId)).map(x=>({...x,key:makeKey()}))]);setView('sequence');setToast(`${p.name} 추가했어요`)};
@@ -255,19 +256,19 @@ function YogaContent(){
   const normalizeSteps=items=>items.flatMap(item=>{const p=poses.find(x=>x.id===item.poseId);if(!p)return[];const beats=Math.max(1,Math.min(128,Number(item.beats)||8));const sides=item.side==='양쪽'?['왼쪽','오른쪽']:item.side==='왼쪽'||item.side==='오른쪽'?[item.side]:[''];return sides.map(side=>({poseId:p.id,name:p.nameKo||p.sanskrit,side,beats}))});
   const startPlayer=()=>{const steps=normalizeSteps(draft);if(!steps.length)return;setPlayer({steps,index:0,beat:0});setIntroDone(false);setPlaying(true)};
   const jumpTo=delta=>{if(!player)return;const index=player.index+delta;if(index>=player.steps.length){setPlaying(false);setPlayer(null);return}setPlayer(prev=>({...prev,index:Math.max(0,index),beat:0}));setIntroDone(false)};
-  const stopPlayer=()=>{setPlaying(false);setPlayer(null);if('speechSynthesis' in window)window.speechSynthesis.cancel()};
+  const stopPlayer=()=>{setPlaying(false);setPlayer(null);if('speechSynthesis' in window)stopVoice()};
   // Pronounce each pose name and side completely before counting begins.
   useEffect(()=>{if(!player||!playing)return;let cancelled=false;setIntroDone(false);const step=player.steps[player.index];if(!step)return;
     if(!('speechSynthesis' in window)){setIntroDone(true);return}
-    window.speechSynthesis.cancel();const utter=new SpeechSynthesisUtterance(`${step.name}${step.side?' '+step.side:''}`);utter.lang='ko-KR';utter.rate=1;utter.onend=()=>{if(!cancelled)setIntroDone(true)};utter.onerror=()=>{if(!cancelled)setIntroDone(true)};
+    stopVoice();const utter=new SpeechSynthesisUtterance(`${step.name}${step.side?' '+step.side:''}`);utter.lang='ko-KR';utter.rate=1;utter.onend=()=>{if(!cancelled)setIntroDone(true)};utter.onerror=()=>{if(!cancelled)setIntroDone(true)};
     // Avoid browser TTS hanging forever when a voice is not present.
     const fallback=setTimeout(()=>{if(!cancelled)setIntroDone(true)},5000);
-    (utter.volume=getVoiceVolume(),window.speechSynthesis.speak(utter));
-    return()=>{cancelled=true;clearTimeout(fallback);window.speechSynthesis.cancel()};
+    (utter.volume=getVoiceVolume(),speakVoice(utter));
+    return()=>{cancelled=true;clearTimeout(fallback);stopVoice()};
   },[player?.index,playing,player?.steps]);
   useEffect(()=>{if(!player||!playing||!introDone||bpm===0)return;const duration=60000/bpm;
     const timer=setTimeout(()=>{const number=player.beat+1;
-      if('speechSynthesis' in window){const ko=['하나','둘','셋','넷','다섯','여섯','일곱','여덟'];const zh=['一','二','三','四','五','六','七','八'];const raw=(countLanguage==='zh'?zh:ko)[(number-1)%8];const count=new SpeechSynthesisUtterance(raw);count.lang=countLanguage==='zh'?'zh-CN':'ko-KR';count.rate=0.85;(count.volume=getVoiceVolume(),window.speechSynthesis.speak(count))}
+      if('speechSynthesis' in window){const ko=['하나','둘','셋','넷','다섯','여섯','일곱','여덟'];const zh=['一','二','三','四','五','六','七','八'];const raw=(countLanguage==='zh'?zh:ko)[(number-1)%8];const count=new SpeechSynthesisUtterance(raw);count.lang=countLanguage==='zh'?'zh-CN':'ko-KR';count.rate=0.85;(count.volume=getVoiceVolume(),speakVoice(count))}
       const step=player.steps[player.index];if(number>=step.beats){if(player.index+1>=player.steps.length){setPlaying(false);setPlayer(null)}else{setPlayer(p=>p?{...p,index:p.index+1,beat:0}:null);setIntroDone(false)}}else setPlayer(p=>p?{...p,beat:number}:null)
     },duration);return()=>clearTimeout(timer);
   },[player?.beat,player?.index,playing,introDone,bpm,countLanguage]);

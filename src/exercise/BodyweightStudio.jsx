@@ -1,3 +1,4 @@
+import {speakVoice,stopVoice} from './sequenceSpeech.mjs';
 import {getVoiceVolume} from './SequenceMetronome';
 import SequenceMetronome from './SequenceMetronome';
 import {Folder} from 'lucide-react';
@@ -92,10 +93,10 @@ export default function BodyweightStudio({ NatureSounds = null }) {
   const update = patch => {if(!cloudReady)return;dirtyRef.current=true;setData(d=>({...d,...(typeof patch==='function'?patch(d):patch)}));};
   const voiceSay = (sentence) => {
     if(!voice || typeof speechSynthesis==='undefined') return;
-    speechSynthesis.cancel();
+    stopVoice();
     const s=new SpeechSynthesisUtterance(sentence);s.lang='ko-KR';s.rate=1.05;s.volume=1;
     const voices=speechSynthesis.getVoices();s.voice=voices.find(v=>v.lang?.toLowerCase().startsWith('ko'))||null;
-    (s.volume=getVoiceVolume(),speechSynthesis.speak(s));
+    (s.volume=getVoiceVolume(),speakVoice(s));
   };
   const stop=()=>{setPlayIndex(-1);indexRef.current=-1;playRef.current=false;setRemain(0);speechSynthesis?.cancel?.();spoken.current.clear();};
   const go=(i,items=draftRef.current)=>{

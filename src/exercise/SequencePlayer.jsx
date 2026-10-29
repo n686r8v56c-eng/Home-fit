@@ -1,3 +1,4 @@
+import {speakVoice,stopVoice} from './sequenceSpeech.mjs';
 import SequenceNatureSound from './SequenceNatureSound';
 import {getVoiceVolume} from './SequenceMetronome';
 import SequenceMetronome,{useFinalCountdown} from './SequenceMetronome';
@@ -20,9 +21,9 @@ export default function SequencePlayer({sequence,close,onComplete,done}){
  useEffect(()=>{const handler=e=>{if(e.key==='Escape')close()};window.addEventListener('keydown',handler);return()=>window.removeEventListener('keydown',handler)},[close]);
  useEffect(()=>{
   if(!running||!voice||!active||!('speechSynthesis'in window))return;
-  window.speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(`${active.name} ${active.side&&active.side!=='기본'?active.side:''}`);u.lang='ko-KR';(u.volume=getVoiceVolume(),window.speechSynthesis.speak(u));
+  stopVoice();const u=new SpeechSynthesisUtterance(`${active.name} ${active.side&&active.side!=='기본'?active.side:''}`);u.lang='ko-KR';(u.volume=getVoiceVolume(),speakVoice(u));
  },[running,index,voice]);
- useEffect(()=>()=>{if('speechSynthesis'in window)window.speechSynthesis.cancel()},[]);
+ useEffect(()=>()=>{if('speechSynthesis'in window)stopVoice()},[]);
  useEffect(()=>{
   if(!running||active?.reps!=null)return;
   deadline.current=Date.now()+latest.current*1000;
