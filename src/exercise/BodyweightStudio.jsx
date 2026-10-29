@@ -1,3 +1,4 @@
+import {Folder} from 'lucide-react';
 import {ScheduleButton,useExercise} from './ExerciseContext';
 import React, { useEffect, useRef, useState } from 'react';
 import {loadStudio,saveStudio,uploadStudioPhoto} from './studioCloud';
@@ -69,6 +70,7 @@ export default function BodyweightStudio({ NatureSounds = null }) {
   const [folderPath,setFolderPath] = useState(null);
   const [videoDraft,setVideoDraft] = useState({url:'',title:'',folder:''});
   const [videoEditing,setVideoEditing] = useState(null);
+  const [bookmarkOpen,setBookmarkOpen]=useState(false);
   const [videoSearch,setVideoSearch] = useState('');
   const [videoTitleStatus,setVideoTitleStatus]=useState('');
   const [playIndex,setPlayIndex] = useState(-1);
@@ -181,15 +183,15 @@ export default function BodyweightStudio({ NatureSounds = null }) {
   const saveVideo=()=>{
     const id=getVideoId(videoDraft.url);
     if(!/^[\w-]{11}$/.test(id))return alert('올바른 YouTube 링크를 입력해줘.');
-    const folder=videoDraft.folder||folderPath||allPaths[0];
+    const folder=videoEditing?videoDraft.folder:(folderPath||'');
     const video={id:videoEditing||uid(),videoId:id,url:`https://www.youtube.com/watch?v=${id}`,title:videoDraft.title.trim()||'제목 미입력 영상',folder};
     update({videoBookmarks:videoEditing?videoBookmarks.map(x=>x.id===videoEditing?video:x):[...videoBookmarks,video]});
-    setVideoEditing(null);setVideoDraft({url:'',title:'',folder:folderPath||''});
+    setBookmarkOpen(false);setVideoEditing(null);setVideoDraft({url:'',title:'',folder:folderPath||''});
   };
-  const editVideo=v=>{setVideoEditing(v.id);setVideoDraft({url:v.url,title:v.title,folder:v.folder});};
+  const editVideo=v=>{setBookmarkOpen(true);setVideoEditing(v.id);setVideoDraft({url:v.url,title:v.title,folder:v.folder});};
   const addFolder=path=>{
     const name=prompt('새 서브폴더 이름'); if(!name?.trim())return;
-    const key=`${path}/${name.trim()}`;
+    const key=path?`${path}/${name.trim()}`:name.trim();
     if(folders[key]!==undefined)return alert('이미 있는 폴더야.');
     update({folders:{...folders,[key]:true}});
   };
@@ -231,15 +233,15 @@ export default function BodyweightStudio({ NatureSounds = null }) {
       <h3>영상 북마크</h3>
       <p style={{fontSize:12,color:'#927ca0'}}>유튜브 링크 저장 · 기본 분류 · 사용자 서브폴더</p>
       {folderPath!==null&&<button style={btn} onClick={()=>{setFolderPath(folderPath.includes('/')?folderPath.slice(0,folderPath.lastIndexOf('/')):null);setVideoEditing(null);}}>← 상위 폴더</button>}
-      <div style={{display:'grid',gridTemplateColumns:'repeat(2,minmax(0,1fr))',gap:8,margin:'14px 0'}}>
-        {allPaths.filter(p=>folderPath===null?!p.includes('/'):p.startsWith(folderPath+'/')&&p.slice(folderPath.length+1).indexOf('/')===-1).map(p=><button key={p} style={{...btn,textAlign:'center',minHeight:70}} onClick={()=>{setFolderPath(p);setVideoDraft(d=>({...d,folder:p}));}}>
-          <b style={{display:'block'}}>{p.split('/').at(-1)}</b>
+      <div style={{display:'grid',gridTemplateColumns:'repeat(3,minmax(0,1fr))',gap:12,margin:'14px 0'}}>
+        {allPaths.filter(p=>folderPath===null?!p.includes('/'):p.startsWith(folderPath+'/')&&p.slice(folderPath.length+1).indexOf('/')===-1).map(p=><button key={p} style={{border:0,background:'transparent',color:'#755b8c',font:'inherit',padding:0,minWidth:0,cursor:'pointer'}} onClick={()=>{setFolderPath(p);setVideoDraft(d=>({...d,folder:p}));}}>
+          <span style={{display:'grid',placeItems:'center',height:90,background:'#eee6f5',borderRadius:20,marginBottom:8}}><Folder size={36} strokeWidth={1.7}/></span><b style={{display:'block',overflowWrap:'anywhere'}}>{p.split('/').at(-1)}</b>
           <small>{videoBookmarks.filter(v=>v.folder===p||v.folder.startsWith(p+'/')).length}개 영상</small>
         </button>)}
       </div>
-      {folderPath&&<button style={{...btn,width:'100%',marginBottom:14}} onClick={()=>addFolder(folderPath)}>＋ 새 서브폴더</button>}
-      <div style={{...card,background:'#faf6fc',margin:'14px 0'}}>
-        <h3 style={{marginTop:0}}>{videoEditing?'북마크 수정':'새 북마크'}</h3>
+      <div style={{display:'flex',gap:8,flexWrap:'wrap',marginBottom:14}}><button style={btn} onClick={()=>addFolder(folderPath||'')}>＋ 폴더 추가</button><button style={{...btn,background:'#c98dad',color:'white'}} onClick={()=>{setVideoEditing(null);setVideoDraft({url:'',title:'',folder:folderPath||''});setVideoTitleStatus('');setBookmarkOpen(true);}}>＋ 북마크 추가</button></div>
+      {bookmarkOpen&&<div role="dialog" aria-modal="true" aria-label="북마크 저장" style={{position:'fixed',inset:0,zIndex:10000,background:'#0006',display:'flex',alignItems:'center',justifyContent:'center',padding:16}} onClick={()=>setBookmarkOpen(false)}>      <div style={{...card,background:'white',width:'100%',maxWidth:500,maxHeight:'85dvh',overflowY:'auto',boxSizing:'border-box'}} onClick={e=>e.stopPropagation()}>
+        <div style={{display:'flex',justifyContent:'space-between',alignItems:'center'}}><h3>{videoEditing?'북마크 수정':'북마크 저장'}</h3><button style={btn} aria-label="닫기" onClick={()=>setBookmarkOpen(false)}>✕</button></div>
         <label style={{display:'block',marginBottom:9}}>유튜브 링크
           <input style={field} type="url" placeholder="https://youtu.be/..." value={videoDraft.url} onChange={e=>setVideoDraft(d=>({...d,url:e.target.value,title:getVideoId(d.url)===getVideoId(e.target.value)?d.title:''}))}/>
         </label>
@@ -247,14 +249,10 @@ export default function BodyweightStudio({ NatureSounds = null }) {
           <input style={field} placeholder="링크 입력 시 자동으로 제목을 가져와요" value={videoDraft.title} onChange={e=>setVideoDraft(d=>({...d,title:e.target.value}))}/>
         </label>
         {videoTitleStatus&&<small style={{display:'block',color:'#927ca0',margin:'-4px 0 9px'}}>{videoTitleStatus}</small>}
-        <label style={{display:'block',marginBottom:12}}>폴더
-          <select style={field} value={videoDraft.folder||folderPath||allPaths[0]} onChange={e=>setVideoDraft(d=>({...d,folder:e.target.value}))}>
-            {allPaths.map(p=><option key={p} value={p}>{p.replaceAll('/',' / ')}</option>)}
-          </select>
-        </label>
-        <div style={{display:'flex',gap:8}}><button style={btn} onClick={saveVideo}>저장</button><button style={btn} onClick={()=>{setVideoEditing(null);setVideoDraft({url:'',title:'',folder:folderPath||''});}}>취소</button></div>
+        <div style={{display:'flex',gap:8}}><button style={btn} onClick={saveVideo}>저장</button><button style={btn} onClick={()=>{setBookmarkOpen(false);setVideoEditing(null);setVideoDraft({url:'',title:'',folder:folderPath||''});}}>취소</button></div>
         <p style={{fontSize:12,color:'#927ca0'}}>썸네일과 제목을 YouTube 링크에서 가져와요. 제목 조회가 불가능하면 직접 입력할 수 있어요.</p>
       </div>
+</div>}
       <input style={{...field,marginBottom:12}} placeholder="영상 제목 검색" value={videoSearch} onChange={e=>setVideoSearch(e.target.value)}/>
       <h3>{folderPath?`${folderPath.split('/').at(-1)} 영상`:'전체 영상'}</h3>
       <div style={{display:'grid',gridTemplateColumns:'repeat(2,minmax(0,1fr))',gap:10}}>
