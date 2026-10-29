@@ -35,6 +35,7 @@ const field = {border:'1px solid #decdea',borderRadius:12,padding:'12px',width:'
 const card = {background:'#fff',border:'1px solid #e1d4ec',borderRadius:20,padding:15};
 
 export default function EquipmentStudio({ activity, NatureSounds = null }) {
+  const context=useExercise();
   const [data,setData] = useState(getInitial);
   const [cloudReady,setCloudReady]=useState(false);
   const [cloudError,setCloudError]=useState('');
@@ -54,7 +55,7 @@ export default function EquipmentStudio({ activity, NatureSounds = null }) {
         saved:(prev.saved||[]).map(seq=>({...seq,items:(seq.items||[]).map(addPhoto)}))
       }));
     };
-    loadStudio(activity,onPhotos)
+    loadStudio(activity,onPhotos,context)
       .then(record=>{if(alive){setData(record);setCloudError('');setCloudReady(true)}})
       .catch(e=>{if(alive)setCloudError('Supabase 불러오기 실패: '+e.message)});
     return()=>{alive=false;mountedRef.current=false};
@@ -90,7 +91,7 @@ export default function EquipmentStudio({ activity, NatureSounds = null }) {
   const draftRef = useRef([]);
   const pausedRef = useRef(false);
   const playRef = useRef(false);
-  useEffect(()=>{if(!cloudReady||!dirtyRef.current)return;dirtyRef.current=false;saveQueue.current=saveQueue.current.catch(()=>{}).then(()=>saveStudio(activity,data)).catch(e=>{if(mountedRef.current)setCloudError('Supabase 저장 실패: '+e.message)});},[data,cloudReady]);
+  useEffect(()=>{if(!cloudReady||!dirtyRef.current)return;dirtyRef.current=false;saveQueue.current=saveQueue.current.catch(()=>{}).then(()=>saveStudio(activity,data,context)).catch(e=>{if(mountedRef.current)setCloudError('Supabase 저장 실패: '+e.message)});},[data,cloudReady]);
   useEffect(()=>{draftRef.current=draft;},[draft]);
   useEffect(()=>{indexRef.current=playIndex;playRef.current=playIndex>=0;},[playIndex]);
   useEffect(()=>{pausedRef.current=paused;},[paused]);

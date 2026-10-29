@@ -360,6 +360,7 @@ const MIND_FLOW_ACTIVITIES = [
   {name:'덤벨', en:'DUMBBELL', icon:'🏋️'},
   {name:'바벨', en:'BARBELL', icon:'🏋️‍♀️'},
   {name:'머신', en:'MACHINE', icon:'⚙️'},
+  {name:'케이블', en:'CABLE', icon:'🏋️'},
   {name:'통합 라이브러리', en:'ALL MOVEMENTS & PRESETS', icon:'🔎'},
 ];
 
@@ -378,9 +379,9 @@ export default function YogaLibrary(){
         : ['스트레칭','매트 필라테스'].includes(activity) ? <TimedActivityStudio key={activity} activity={activity}/>
         : activity==='골반순환' ? <PelvicStudio/>
         : activity==='맨몸근력' ? <BodyweightStudio/>
-        : ['바벨','덤벨','머신'].includes(activity) ? <EquipmentStudio key={activity} activity={activity}/>
+        : ['바벨','덤벨','머신','케이블'].includes(activity) ? <EquipmentStudio key={activity} activity={activity}/>
         : <ActivityStudio activity={activity}/>}
-      {!['골반순환','맨몸근력','바벨','덤벨','머신','스트레칭','매트 필라테스'].includes(activity)&&<NatureSound />}
+      {!['골반순환','맨몸근력','바벨','덤벨','머신','케이블','스트레칭','매트 필라테스'].includes(activity)&&<NatureSound />}
     </div>
   );
   return (
