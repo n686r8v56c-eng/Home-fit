@@ -1,3 +1,4 @@
+import EquipmentStudio from './EquipmentStudio';
 import {ScheduleButton,useExercise} from './ExerciseContext';
 import React,{useMemo,useState,useEffect,useRef} from 'react';
 import {Search,Plus,ChevronUp,ChevronDown,Trash2,X,BookOpen,Save,Image as ImageIcon,Upload,Camera} from 'lucide-react';
@@ -371,8 +372,9 @@ export default function YogaLibrary(){
       {activity==='마사지' ? <MassageLibrary/>
         : activity==='골반순환' ? <PelvicStudio/>
         : activity==='맨몸근력' ? <BodyweightStudio/>
+        : ['바벨','덤벨','머신'].includes(activity) ? <EquipmentStudio key={activity} activity={activity}/>
         : <ActivityStudio activity={activity}/>}
-      {!['골반순환','맨몸근력'].includes(activity)&&<NatureSound />}
+      {!['골반순환','맨몸근력','바벨','덤벨','머신'].includes(activity)&&<NatureSound />}
     </div>
   );
   return (

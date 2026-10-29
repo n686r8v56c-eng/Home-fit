@@ -1,10 +1,11 @@
 const bounded=(n,fallback)=>Number.isFinite(Number(n))&&Number(n)>0?Math.min(86400,Number(n)):fallback;
-export const activityKind = activity => activity === '마사지' ? 'skin' : ['요가', 'SNPE', '매트 필라테스', '골반순환', '스트레칭', '폼롤러'].includes(activity) ? 'stretch' : 'workout';
+const STRETCH_ACTIVITIES=new Set(['요가','SNPE','매트 필라테스','골반순환','스트레칭','폼롤러']);
+export const activityKind=activity=>activity==='마사지'?'skin':STRETCH_ACTIVITIES.has(activity)?'stretch':'workout';
 export function makeSequence({id,name,title,activity,items,steps,bpm=30,language='ko',...extra}){
  const source=items||steps||[];
  const normalized=source.map((item,index)=>({...item,
   name:item.name||item.title||`동작 ${index+1}`,
-  seconds:Math.max(1,Math.round(bounded(item.seconds, bounded(item.beats,8)*60/bounded(bpm,30)))),
+  seconds:item.reps!=null?0:Math.max(1,Math.round(bounded(item.seconds, bounded(item.beats,8)*60/bounded(bpm,30)))),
  }));
  return {...extra,id:`exercise:${activity}:${id}`,sourceId:id,title:name||title||'운동 시퀀스',activity,
   items:normalized,bpm,language,kind:activityKind(activity),folders:[activity],
