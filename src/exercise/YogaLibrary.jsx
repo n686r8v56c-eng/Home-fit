@@ -1,3 +1,4 @@
+import SequenceMetronome from './SequenceMetronome';
 import TimedActivityStudio from './TimedActivityStudio';
 import EquipmentStudio from './EquipmentStudio';
 import {ScheduleButton,useExercise} from './ExerciseContext';
@@ -282,7 +283,7 @@ function YogaContent(){
   const saveSequence=()=>{if(!draft.length)return;const name=window.prompt('저장할 시퀀스 이름을 입력해 주세요',seqName.trim()||'')?.trim();if(!name)return;setSeqName(name);setSaved(prev=>[{id:`seq-${Date.now()}`,name,items:draft.map(x=>({...x})),createdAt:new Date().toISOString()},...prev]);setToast(`시퀀스 ‘${name}’ 저장 완료`);};
   const loadSequence=s=>{setDraft(s.items.filter(x=>poses.some(p=>p.id===x.poseId)).map((x,i)=>({...x,key:`load-${Date.now()}-${i}`})));setSeqName(s.name);setView('sequence');};
   const poseById=id=>poses.find(p=>p.id===id);
-  return <div className="yoga-library">
+  return <div className="yoga-library"><SequenceMetronome active={playing&&Boolean(player)}/>
     <div className="page-heading"><div className="eyebrow">YOGA STUDIO</div><h1>나의 요가</h1><p>자세를 찾아보고, 나만의 시퀀스를 만들어요.</p></div>
     <section className="panel">
       <div className="yoga-switch"><button className={view==='library'?'active':''} onClick={()=>setView('library')}>자세 라이브러리</button><button className={view==='presets'?'active':''} onClick={()=>setView('presets')}>프리셋</button><button className={view==='sequence'?'active':''} onClick={()=>setView('sequence')}>나의 시퀀스 ({draft.length})</button></div>

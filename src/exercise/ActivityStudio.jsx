@@ -1,3 +1,4 @@
+import SequenceMetronome from './SequenceMetronome';
 import {ScheduleButton,useExercise} from './ExerciseContext';
 import React,{useCallback,useEffect,useMemo,useRef,useState} from 'react';
 import FoamRollerLibrary from './FoamRollerLibrary';
@@ -100,7 +101,7 @@ function ActivityStudioCore({activity}){
  useEffect(()=>()=>{if('speechSynthesis' in window)window.speechSynthesis.cancel()},[]);
  const editor=editing!==null;
  const rows=(arr,table)=>arr.map(x=><div key={x.id} style={{...STYLE.panel,display:'flex',alignItems:'center',gap:10}}><div style={{flex:1}}><b>{x.name}</b><div style={STYLE.small}>{x.activity} · {(x.items||[]).length}개 동작</div></div><button style={STYLE.btn} onClick={()=>{setDraft((x.items||[]).map(s=>({...s,nonce:id()})));setSequenceName(x.name);setView('sequence');}}>불러오기</button><ScheduleButton sequence={{...x,activity:x.activity||activity,bpm,language:lang,items:(x.items||[]).map(step=>({...step,image:sequencePhoto(step),imagePath:moves.find(m=>m.id===step.id)?.image_path||step.image_path,bucket:YOGA_BUCKET}))}}/><button title="삭제" style={STYLE.btn} onClick={()=>deleteRow(table,x)}><Trash2 size={15}/></button></div>);
- return <div style={{color:'#584966',padding:'0 3px 30px'}}>
+ return <div style={{color:'#584966',padding:'0 3px 30px'}}><SequenceMetronome active={isPlaying&&player!==null}/>
  <h2 style={{fontSize:22,margin:'4px 0'}}>{activity}</h2><p style={{...STYLE.small,marginBottom:14}}>{allMode?'7개 운동의 동작·프리셋을 검색하고 자유롭게 조합해요.':'동작을 하나씩 등록하고, 태그로 모아 나만의 라이브러리를 만들어요.'}</p>
  {err&&<div role="alert" style={{...STYLE.panel,color:'#a33355',background:'#fff3f5'}}>{err}</div>}
  {status&&<div role="status" style={{fontSize:13,color:'#84619f',marginBottom:9}}>{status}</div>}

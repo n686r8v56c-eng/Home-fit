@@ -1,3 +1,4 @@
+import SequenceMetronome from './SequenceMetronome';
 import {Folder} from 'lucide-react';
 import {ScheduleButton,useExercise} from './ExerciseContext';
 import React, { useEffect, useRef, useState } from 'react';
@@ -209,6 +210,7 @@ export default function BodyweightStudio({ NatureSounds = null }) {
   const current=playIndex>=0?draft[playIndex]:null;
 
   return <div style={{fontFamily:'-apple-system,BlinkMacSystemFont,"Noto Sans KR",sans-serif',color:'#52405f',background:'#fbf8fd',padding:'16px 12px 90px',maxWidth:740,margin:'auto',minHeight:480}}>
+    <SequenceMetronome active={playIndex>=0&&!paused}/>
     <style>{`@keyframes bwFade {from{opacity:0}to{opacity:1}} .bw-card button:active{transform:scale(.96)} .bw-input:focus{outline:2px solid #c3a4df}`}</style>
     {!cloudReady&&!cloudError&&<p aria-live="polite" style={{fontSize:12,color:'#9687a0',margin:'3px 0 9px'}}>데이터 연결 중 · 화면은 먼저 표시했어요</p>}
     {cloudError&&<div role="alert" style={{padding:12,color:'#ad3865'}}>{cloudError}</div>}
