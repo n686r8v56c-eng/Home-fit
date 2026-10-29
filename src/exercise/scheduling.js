@@ -22,9 +22,20 @@ export function toggleCompletion(data,date,id){
  const done=data.completions.some(c=>c.date===date&&c.videoId===id);
  const plan=data.plans.find(p=>p.date===date&&p.videoId===id);
  return {...data,completions:done?data.completions.filter(c=>!(c.date===date&&c.videoId===id)):
-  [...data.completions,{date,videoId:id,createdAt:new Date().toISOString(),...(plan?.sequence?{sequence:plan.sequence,kind:plan.kind}:{})}]};
+  [...data.completions,{date,videoId:id,createdAt:new Date().toISOString(),...(plan?.sequence?{sequence:plan.sequence,kind:plan.kind}:plan?.video?{video:plan.video,kind:plan.kind}:{})}]};
 }
 export function mergeYogaData(current={},incoming={}){
  const merge=(a=[],b=[])=>{const ids=new Set(a.map(x=>x.id));return [...a,...b.filter(x=>!ids.has(x.id)&&ids.add(x.id))]};
  return {...current,sequences:merge(current.sequences,incoming.sequences),presets:merge(current.presets,incoming.presets)};
+}
+
+export function makeBookmarkVideo(bookmark,activity){
+ const youtubeId=bookmark.youtubeId||bookmark.videoId||bookmark.video_id||bookmark.video;
+ if(!/^[\w-]{11}$/.test(youtubeId||''))throw new Error('유튜브 주소를 확인해 주세요.');
+ return {id:`bookmark:${activity}:${bookmark.id||youtubeId}`,bookmark:true,sourceId:bookmark.id,title:bookmark.title||'YouTube 영상',youtubeId,url:bookmark.url||bookmark.youtube_url||`https://www.youtube.com/watch?v=${youtubeId}`,activity,kind:activityKind(activity),folders:[activity],minutes:Number(bookmark.minutes)||0};
+}
+export function addBookmarkPlan(data,date,video,kind){
+ if(!/^\d{4}-\d{2}-\d{2}$/.test(date)||!video.youtubeId)throw new Error('날짜와 영상을 확인해 주세요.');
+ const record={date,videoId:video.id,kind:kind||video.kind,video:JSON.parse(JSON.stringify(video))};
+ return {...data,plans:data.plans.some(p=>p.date===date&&p.videoId===video.id)?data.plans.map(p=>p.date===date&&p.videoId===video.id?record:p):[...data.plans,record]};
 }

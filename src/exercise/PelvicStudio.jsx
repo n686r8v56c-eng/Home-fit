@@ -1,3 +1,4 @@
+import {BookmarkScheduleButton} from './ExerciseContext';
 import {getCountdownEnabled} from './SequenceMetronome';
 import {speakVoice,stopVoice} from './sequenceSpeech.mjs';
 import {getVoiceVolume} from './SequenceMetronome';
@@ -253,6 +254,7 @@ export default function PelvicStudio({ NatureSounds = null }) {
       <div style={{display:'grid',gridTemplateColumns:'repeat(2,minmax(0,1fr))',gap:10}}>
         {videoBookmarks.filter(v=>(!folderPath||v.folder===folderPath||v.folder.startsWith(folderPath+'/'))&&v.title.toLowerCase().includes(videoSearch.toLowerCase())).map(v=><div key={v.id} style={{...card,padding:8,minWidth:0,position:'relative'}}>
           <a href={v.url} target="_blank" rel="noopener noreferrer" aria-label={`${v.title} YouTube에서 보기`} style={{display:'block',color:'inherit',textDecoration:'none'}}><img src={`https://i.ytimg.com/vi/${v.videoId}/hqdefault.jpg`} alt="" loading="lazy" style={{display:'block',width:'100%',aspectRatio:'16/9',objectFit:'cover',borderRadius:10}}/><b title={v.title} style={{display:'-webkit-box',WebkitLineClamp:2,WebkitBoxOrient:'vertical',overflow:'hidden',fontSize:13,lineHeight:1.5,overflowWrap:'anywhere',margin:'7px 0',minHeight:'3em'}}>{v.title}</b></a>
+          <BookmarkScheduleButton bookmark={v} activity={'골반순환'}/>
           <button type="button" aria-label={`${v.title} 북마크 삭제`} style={{position:'absolute',right:5,top:5,width:32,height:32,border:0,borderRadius:'50%',background:'#fffffff0',color:'#755b8c',fontSize:23,lineHeight:1,cursor:'pointer',display:'grid',placeItems:'center'}} onClick={()=>{if(confirm('이 북마크를 삭제할까?'))update({videoBookmarks:videoBookmarks.filter(x=>x.id!==v.id)});}}>×</button>
         </div>)}
       </div>
