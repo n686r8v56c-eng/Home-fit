@@ -15,7 +15,6 @@ import NatureSound from './NatureSound';
    <BodyweightStudio NatureSounds={YourExistingNatureSoundComponent} />
 */
 const STRUCTURE = {
-  '미분류':['미분류'],
   '엉덩이':['대둔근','중둔근'],
   '허벅지':['내전근','대퇴사두근','햄스트링'],
   '종아리':['비복근','가자미근','전경골근'],
@@ -25,6 +24,7 @@ const STRUCTURE = {
   '가슴':['대흉근'],
   '어깨':['전면삼각근','측면삼각근','후면삼각근'],
   '팔':['이두근','삼두근'],
+  '미분류':['미분류'],
 };
 const getInitial = () => ({});
 const uid = () => (globalThis.crypto?.randomUUID?.() || `${Date.now()}-${Math.random()}`);

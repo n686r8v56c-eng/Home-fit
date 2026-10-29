@@ -1,3 +1,4 @@
+import {importEquipmentCatalog} from './equipmentCatalog.mjs';
 import {yogaSupabase as db,YOGA_BUCKET} from './supabaseYoga';
 import {studioUser,uploadStudioPhoto as upload} from './studioCloud';
 const keys={'바벨':'barbell','덤벨':'dumbbell','머신':'machine','케이블':'cable'};
@@ -15,6 +16,8 @@ export async function loadStudio(activity,onPhotos,context){
   const merge=(old=[],incoming=[])=>{const ids=new Set(old.map(x=>x.id));return [...old,...incoming.filter(x=>!ids.has(x.id))]};
   record={...record,legacyImported:true,exercises:merge(record.exercises,results[0].data.map(convert)),saved:merge(record.saved,[...results[1].data,...results[2].data.map(x=>({...x,id:'preset:'+x.id}))].map(x=>({...x,items:(x.items||[]).map(convert)})))};
  }
+ const seeded=importEquipmentCatalog(record,activity);
+ if(seeded!==record){record=seeded;await saveStudio(activity,record,context);}
  const items=[...(record.exercises||[]),...(record.saved||[]).flatMap(s=>s.items||[])];
  void Promise.all(items.filter(x=>x.imagePath).map(async x=>{const {data}=await db.storage.from(x.bucket||'mindflow-studio-photos').createSignedUrl(x.imagePath,86400);return [x.imagePath,data?.signedUrl||'']})).then(pairs=>onPhotos?.(Object.fromEntries(pairs)));
  return record;
