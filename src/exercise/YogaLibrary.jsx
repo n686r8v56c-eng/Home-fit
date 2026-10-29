@@ -366,8 +366,7 @@ export default function YogaLibrary(){
   if(activity==='요가')return (
     <div>
       <button type="button" onClick={()=>setActivity(null)} style={{display:'inline-flex',alignItems:'center',gap:7,margin:'4px 0 14px',padding:'10px 15px',border:'1px solid #e7ddec',borderRadius:12,background:'#fff',color:'#775a8f',fontWeight:700,cursor:'pointer'}}>‹ 전체 운동</button>
-      <YogaContent />
-      <NatureSound />
+      <TimedActivityStudio activity="요가" legacyContent={<YogaContent/>}/>
     </div>
   );
   if(activity)return (

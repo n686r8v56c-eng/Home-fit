@@ -1,3 +1,4 @@
+import {YOGA_GROUPS} from './yogaStudioData.mjs';
 import {getCountdownEnabled} from './SequenceMetronome';
 import {speakVoice,stopVoice} from './sequenceSpeech.mjs';
 import {getVoiceVolume} from './SequenceMetronome';
@@ -9,7 +10,6 @@ import {Folder} from 'lucide-react';
 import {ScheduleButton,useExercise} from './ExerciseContext';
 import React, { useEffect, useRef, useState } from 'react';
 import {loadStudio,saveStudio,uploadStudioPhoto} from './activityCloud';
-import NatureSound from './NatureSound';
 
 /* Drop-in Mind Flow tab. Data is browser-local until connected to the app's Supabase layer.
    For the EXISTING nature-sound mixer, pass NatureSounds as a prop:
@@ -23,9 +23,9 @@ const btn = {border:'1px solid #e0d1ed',background:'#f3ebf8',color:'#735989',bor
 const field = {border:'1px solid #decdea',borderRadius:12,padding:'12px',width:'100%',boxSizing:'border-box',fontSize:15,color:'#53415e',background:'#fff'};
 const card = {background:'#fff',border:'1px solid #e1d4ec',borderRadius:20,padding:15};
 
-export default function TimedActivityStudio({ activity, NatureSounds = null }) {
+export default function TimedActivityStudio({ activity, NatureSounds = null, legacyContent = null }) {
   const context=useExercise();
-  const STRUCTURE=Object.fromEntries([...(activity==='매트 필라테스'?PILATES_GROUPS:STRETCH_GROUPS),'미분류'].map(x=>[x,[]]));
+  const STRUCTURE=Object.fromEntries([...(activity==='요가'?YOGA_GROUPS:activity==='매트 필라테스'?PILATES_GROUPS:STRETCH_GROUPS),'미분류'].map(x=>[x,[]]));
   const [data,setData] = useState(getInitial);
   const [cloudReady,setCloudReady]=useState(false);
   const [cloudError,setCloudError]=useState('');
@@ -199,7 +199,7 @@ export default function TimedActivityStudio({ activity, NatureSounds = null }) {
     const obj={id:loadedId||uid(),name:sequenceName.trim(),items:draft.map(x=>({...x}))};
     update({saved:loadedId?saved.map(x=>x.id===loadedId?obj:x):[...saved,obj]});setLoadedId(obj.id);
   };
-  const tagged=exercises.filter(x=>(Object.hasOwn(STRUCTURE,x.major)?x.major:'미분류')===major);
+  const tagged=exercises.filter(x=>(Object.hasOwn(STRUCTURE,x.major)?x.major:'미분류')===major||(activity==='요가'&&x.tags?.includes(major)));
   const tags=[...new Set(tagged.flatMap(x=>x.tags||[]))];
   const filtered=tagged.filter(x=>(activeTag==='전체'||x.tags?.includes(activeTag))&&`${x.name} ${x.description} ${(x.tags||[]).join(' ')}`.toLowerCase().includes(search.toLowerCase()));
   const current=playIndex>=0?draft[playIndex]:null;
@@ -225,7 +225,6 @@ export default function TimedActivityStudio({ activity, NatureSounds = null }) {
       {!filtered.length&&<p style={{color:'#9987a5',textAlign:'center',padding:25}}>등록된 운동이 없어. + 새 동작 등록을 눌러줘.</p>}
     </>}
     {tab==='sequence'&&<div style={card}><h3>나의 {activity} 시퀀스</h3><input className="pelvic-input" style={field} value={sequenceName} onChange={e=>setSequenceName(e.target.value)} placeholder="시퀀스 이름 직접 입력"/><p style={{fontSize:12,color:'#927ca0'}}>운동 라이브러리에서 ＋ 버튼을 누르면 자동으로 추가돼.</p>{draft.map((x,i)=><div key={x.id} style={{display:'flex',alignItems:'center',gap:7,borderBottom:'1px solid #e8ddf1',padding:'12px 0'}}><small>{i+1}</small><div style={{height:50,width:50,borderRadius:9,background:'#f6f1fa',flexShrink:0,overflow:'hidden'}}>{x.image&&<img alt="" src={x.image} style={{width:'100%',height:'100%',objectFit:'cover'}}/>}</div><div style={{flex:1,minWidth:0}}><strong style={{fontSize:13,display:'block'}}>{x.name}</strong><select aria-label="좌우 설정" value={x.side||'기본'} onChange={e=>setDraft(d=>d.map(y=>y.id===x.id?{...y,side:e.target.value}:y))} style={{...field,width:83,padding:6,marginTop:3,marginRight:5}}>{['기본','왼쪽','오른쪽'].map(side=><option key={side} value={side}>{side}</option>)}</select><input aria-label="운동 시간 (초)" type="number" min="1" max="3600" value={x.seconds} onChange={e=>setDraft(d=>d.map(y=>y.id===x.id?{...y,seconds:e.target.value}:y))} style={{...field,width:77,padding:6,marginTop:3}}/> 초</div><button style={btn} onClick={()=>moveSequence(i,-1)}>↑</button><button style={btn} onClick={()=>moveSequence(i,1)}>↓</button><button style={btn} onClick={()=>setDraft(d=>d.filter(y=>y.id!==x.id))}>×</button></div>)}<div style={{display:'flex',gap:8,flexWrap:'wrap',marginTop:15}}><button style={btn} onClick={start}>▶ 시작</button><button style={btn} onClick={stop}>Ⅱ 정지</button><button style={btn} onClick={saveSequence}>▣ 시퀀스 저장</button><button style={btn} onClick={()=>{stop();setDraft([]);setLoadedId(null);setSequenceName('');}}>＋ 새 시퀀스</button></div><h3 style={{marginTop:25}}>저장된 시퀀스</h3>{saved.map(s=><div key={s.id} style={{display:'flex',alignItems:'center',gap:8,padding:'8px 0',borderTop:'1px solid #e9dcf0'}}><div style={{flex:1}}><strong>{s.name}</strong><small style={{display:'block'}}>{s.items.length}개 동작</small></div><button style={btn} onClick={()=>{stop();setLoadedId(s.id);setSequenceName(s.name);setDraft(s.items.map(x=>({...x})));}}>불러오기</button><ScheduleButton sequence={{...s,activity,items:s.items.map(x=>({...x,bucket:x.bucket||'mindflow-studio-photos'}))}}/><button style={btn} onClick={()=>{if(confirm('저장된 시퀀스를 삭제할까?'))update({saved:saved.filter(x=>x.id!==s.id)})}}>삭제</button></div>)}</div>}
-    {tab==='sequence'&&<div style={{marginTop:16}}><NatureSound /></div>}
     {tab==='bookmarks'&&<div style={card}>
       <h3>영상 북마크</h3>
       <p style={{fontSize:12,color:'#927ca0'}}>유튜브 링크 저장 · 기본 분류 · 사용자 서브폴더</p>
@@ -259,7 +258,7 @@ export default function TimedActivityStudio({ activity, NatureSounds = null }) {
         </div>)}
       </div>
     </div>}
-    <details style={{marginTop:20}}><summary>기존 프리셋 · 기본 동작 가져오기</summary><ActivityStudio activity={activity}/></details>
+    <details style={{marginTop:20}}><summary>기존 프리셋 · 기본 동작 가져오기</summary>{legacyContent||<ActivityStudio activity={activity}/>}</details>
     {current&&<div role="dialog" aria-modal="true" aria-label={`${activity} 시퀀스 재생`} style={{position:'fixed',inset:0,zIndex:9999,background:'rgba(38,28,49,.65)',display:'flex',alignItems:'center',justifyContent:'center',padding:16,animation:'pelvicFade .2s'}}><div style={{...card,maxWidth:450,width:'100%',maxHeight:'95vh',overflowY:'auto',padding:20,borderRadius:25}}><div style={{display:'flex',justifyContent:'space-between',alignItems:'center',marginBottom:15}}><b>{activity} 시퀀스 재생 · {playIndex+1}/{draft.length}</b><button onClick={stop} style={{...btn,background:'white'}}>✕</button></div><div style={{height:240,background:'#f8f4fb',borderRadius:15,overflow:'hidden',display:'grid',placeItems:'center'}}>{current.image?<img src={current.image} alt={current.name} style={{width:'100%',height:'100%',objectFit:'contain'}}/>:<span>등록한 운동 사진이 여기에 표시돼</span>}</div><h2 style={{textAlign:'center',margin:'16px 0 8px'}}>{current.side&&current.side!=='기본'?current.side+' ':''}{current.name}</h2><div style={{fontSize:62,fontWeight:700,textAlign:'center',fontVariantNumeric:'tabular-nums'}}>{secs(remain)}</div><p style={{textAlign:'center',color:'#9687a0',fontSize:13}}>남은 시간 · 한국어 음성 안내</p><label style={{display:'flex',gap:6,justifyContent:'center',fontSize:13,marginBottom:12}}><input type="checkbox" checked={voice} onChange={e=>setVoice(e.target.checked)}/> 한국어 음성 안내</label><div style={{display:'flex',justifyContent:'center',gap:6,flexWrap:'wrap'}}><button style={btn} disabled={playIndex===0} onClick={()=>go(playIndex-1)}>◀ 이전</button><button style={btn} onClick={()=>{setPaused(v=>!v);if(typeof speechSynthesis!=='undefined') stopVoice();}}>{paused?'▶ 재개':'Ⅱ 일시정지'}</button><button style={btn} onClick={()=>go(playIndex+1)}>다음 ▶</button><button style={btn} onClick={stop}>종료</button></div></div></div>}
     </div>
   </div>;
