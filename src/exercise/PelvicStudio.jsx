@@ -247,11 +247,9 @@ export default function PelvicStudio({ NatureSounds = null }) {
       <input style={{...field,marginBottom:12}} placeholder="영상 제목 검색" value={videoSearch} onChange={e=>setVideoSearch(e.target.value)}/>
       <h3>{folderPath?`${folderPath.split('/').at(-1)} 영상`:'전체 영상'}</h3>
       <div style={{display:'grid',gridTemplateColumns:'repeat(2,minmax(0,1fr))',gap:10}}>
-        {videoBookmarks.filter(v=>(!folderPath||v.folder===folderPath||v.folder.startsWith(folderPath+'/'))&&v.title.toLowerCase().includes(videoSearch.toLowerCase())).map(v=><div key={v.id} style={{...card,padding:8,minWidth:0}}>
-          <a href={v.url} target="_blank" rel="noopener noreferrer" aria-label={`${v.title} YouTube에서 보기`}><img src={`https://i.ytimg.com/vi/${v.videoId}/hqdefault.jpg`} alt={v.title} loading="lazy" style={{width:'100%',aspectRatio:'16/9',objectFit:'cover',borderRadius:10}}/></a>
-          <b style={{display:'block',fontSize:13,overflowWrap:'anywhere',margin:'7px 0'}}>{v.title}</b>
-          <small style={{display:'block',color:'#987daa'}}>{v.folder.replaceAll('/',' / ')}</small>
-          <div style={{display:'flex',gap:5,flexWrap:'wrap',marginTop:8}}><a href={v.url} target="_blank" rel="noopener noreferrer" style={{...btn,textDecoration:'none'}}>▶ 보기</a><button style={btn} onClick={()=>editVideo(v)}>수정</button><button style={btn} onClick={()=>{if(confirm('이 북마크를 삭제할까?'))update({videoBookmarks:videoBookmarks.filter(x=>x.id!==v.id)});}}>삭제</button></div>
+        {videoBookmarks.filter(v=>(!folderPath||v.folder===folderPath||v.folder.startsWith(folderPath+'/'))&&v.title.toLowerCase().includes(videoSearch.toLowerCase())).map(v=><div key={v.id} style={{...card,padding:8,minWidth:0,position:'relative'}}>
+          <a href={v.url} target="_blank" rel="noopener noreferrer" aria-label={`${v.title} YouTube에서 보기`} style={{display:'block',color:'inherit',textDecoration:'none'}}><img src={`https://i.ytimg.com/vi/${v.videoId}/hqdefault.jpg`} alt="" loading="lazy" style={{display:'block',width:'100%',aspectRatio:'16/9',objectFit:'cover',borderRadius:10}}/><b title={v.title} style={{display:'-webkit-box',WebkitLineClamp:2,WebkitBoxOrient:'vertical',overflow:'hidden',fontSize:13,lineHeight:1.5,overflowWrap:'anywhere',margin:'7px 0',minHeight:'3em'}}>{v.title}</b></a>
+          <button type="button" aria-label={`${v.title} 북마크 삭제`} style={{position:'absolute',right:5,top:5,width:32,height:32,border:0,borderRadius:'50%',background:'#fffffff0',color:'#755b8c',fontSize:23,lineHeight:1,cursor:'pointer',display:'grid',placeItems:'center'}} onClick={()=>{if(confirm('이 북마크를 삭제할까?'))update({videoBookmarks:videoBookmarks.filter(x=>x.id!==v.id)});}}>×</button>
         </div>)}
       </div>
     </div>}
