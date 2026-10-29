@@ -1,3 +1,4 @@
+import {importBodyweightCatalog} from './bodyweightCatalog.mjs';
 import SequenceStepActions from './SequenceStepActions';
 import {duplicateStep} from './sequenceEditing.mjs';
 import {BookmarkScheduleButton} from './ExerciseContext';
@@ -55,7 +56,7 @@ export default function BodyweightStudio({ NatureSounds = null }) {
       }));
     };
     loadStudio('bodyweight',onPhotos)
-      .then(record=>{if(alive){setData(record);setCloudError('');setCloudReady(true)}})
+      .then(async record=>{const seeded=importBodyweightCatalog(record);if(seeded!==record)await saveStudio('bodyweight',seeded);if(alive){setData(seeded);setCloudError('');setCloudReady(true)}})
       .catch(e=>{if(alive)setCloudError('Supabase 불러오기 실패: '+e.message)});
     return()=>{alive=false;mountedRef.current=false};
   },[]);
@@ -209,7 +210,7 @@ export default function BodyweightStudio({ NatureSounds = null }) {
     const obj={id:loadedId||uid(),name:sequenceName.trim(),items:draft.map(x=>({...x}))};
     update({saved:loadedId?saved.map(x=>x.id===loadedId?obj:x):[...saved,obj]});setLoadedId(obj.id);
   };
-  const tagged=exercises.filter(x=>(major==='전체'||x.major===major)&&(minor==='전체'||x.minor===minor));
+  const tagged=exercises.filter(x=>(major==='전체'||x.major===major)&&(minor==='전체'||x.minor===minor||(minor==='대원근'&&x.tags?.includes('대원근'))));
   const tags=[...new Set(tagged.flatMap(x=>x.tags||[]))];
   const filtered=tagged.filter(x=>(activeTag==='전체'||x.tags?.includes(activeTag))&&`${x.name} ${x.description} ${(x.tags||[]).join(' ')}`.toLowerCase().includes(search.toLowerCase()));
   const current=playIndex>=0?draft[playIndex]:null;
