@@ -1,0 +1,697 @@
+[
+  {
+    "id": "finando-64",
+    "category": "머리·목·얼굴",
+    "nameKo": "흉쇄유돌근",
+    "nameEn": "Sternocleidomastoid",
+    "page": 64,
+    "regions": [
+      "얼굴",
+      "두피",
+      "데콜테"
+    ],
+    "source": "Donna Finando, Trigger Point Therapy for Myofascial Pain: The Practice of Informed Touch",
+    "status": "목차 등록·위치/연관통 미검수"
+  },
+  {
+    "id": "finando-71",
+    "category": "머리·목·얼굴",
+    "nameKo": "사각근",
+    "nameEn": "Scalenes",
+    "page": 71,
+    "regions": [
+      "얼굴",
+      "두피",
+      "데콜테"
+    ],
+    "source": "Donna Finando, Trigger Point Therapy for Myofascial Pain: The Practice of Informed Touch",
+    "status": "목차 등록·위치/연관통 미검수"
+  },
+  {
+    "id": "finando-79",
+    "category": "머리·목·얼굴",
+    "nameKo": "두판상근",
+    "nameEn": "Splenius Capitis",
+    "page": 79,
+    "regions": [
+      "얼굴",
+      "두피",
+      "데콜테"
+    ],
+    "source": "Donna Finando, Trigger Point Therapy for Myofascial Pain: The Practice of Informed Touch",
+    "status": "목차 등록·위치/연관통 미검수"
+  },
+  {
+    "id": "finando-84",
+    "category": "머리·목·얼굴",
+    "nameKo": "경판상근",
+    "nameEn": "Splenius Cervicis",
+    "page": 84,
+    "regions": [
+      "얼굴",
+      "두피",
+      "데콜테"
+    ],
+    "source": "Donna Finando, Trigger Point Therapy for Myofascial Pain: The Practice of Informed Touch",
+    "status": "목차 등록·위치/연관통 미검수"
+  },
+  {
+    "id": "finando-88",
+    "category": "머리·목·얼굴",
+    "nameKo": "목 뒤쪽 근육군",
+    "nameEn": "Posterior Cervicals",
+    "page": 88,
+    "regions": [
+      "얼굴",
+      "두피",
+      "데콜테"
+    ],
+    "source": "Donna Finando, Trigger Point Therapy for Myofascial Pain: The Practice of Informed Touch",
+    "status": "목차 등록·위치/연관통 미검수"
+  },
+  {
+    "id": "finando-94",
+    "category": "머리·목·얼굴",
+    "nameKo": "측두근",
+    "nameEn": "Temporalis",
+    "page": 94,
+    "regions": [
+      "얼굴",
+      "두피",
+      "데콜테"
+    ],
+    "source": "Donna Finando, Trigger Point Therapy for Myofascial Pain: The Practice of Informed Touch",
+    "status": "목차 등록·위치/연관통 미검수"
+  },
+  {
+    "id": "finando-98",
+    "category": "머리·목·얼굴",
+    "nameKo": "교근",
+    "nameEn": "Masseter",
+    "page": 98,
+    "regions": [
+      "얼굴",
+      "두피",
+      "데콜테"
+    ],
+    "source": "Donna Finando, Trigger Point Therapy for Myofascial Pain: The Practice of Informed Touch",
+    "status": "목차 등록·위치/연관통 미검수"
+  },
+  {
+    "id": "finando-102",
+    "category": "머리·목·얼굴",
+    "nameKo": "익돌근군",
+    "nameEn": "Pterygoids",
+    "page": 102,
+    "regions": [
+      "얼굴",
+      "두피",
+      "데콜테"
+    ],
+    "source": "Donna Finando, Trigger Point Therapy for Myofascial Pain: The Practice of Informed Touch",
+    "status": "목차 등록·위치/연관통 미검수"
+  },
+  {
+    "id": "finando-109",
+    "category": "어깨대 근육",
+    "nameKo": "승모근",
+    "nameEn": "Trapezius",
+    "page": 109,
+    "regions": [
+      "데콜테",
+      "등"
+    ],
+    "source": "Donna Finando, Trigger Point Therapy for Myofascial Pain: The Practice of Informed Touch",
+    "status": "목차 등록·위치/연관통 미검수"
+  },
+  {
+    "id": "finando-117",
+    "category": "어깨대 근육",
+    "nameKo": "견갑거근",
+    "nameEn": "Levator Scapulae",
+    "page": 117,
+    "regions": [
+      "데콜테",
+      "등"
+    ],
+    "source": "Donna Finando, Trigger Point Therapy for Myofascial Pain: The Practice of Informed Touch",
+    "status": "목차 등록·위치/연관통 미검수"
+  },
+  {
+    "id": "finando-124",
+    "category": "어깨대 근육",
+    "nameKo": "능형근",
+    "nameEn": "Rhomboids",
+    "page": 124,
+    "regions": [
+      "데콜테",
+      "등"
+    ],
+    "source": "Donna Finando, Trigger Point Therapy for Myofascial Pain: The Practice of Informed Touch",
+    "status": "목차 등록·위치/연관통 미검수"
+  },
+  {
+    "id": "finando-128",
+    "category": "어깨대 근육",
+    "nameKo": "전거근",
+    "nameEn": "Serratus Anterior",
+    "page": 128,
+    "regions": [
+      "데콜테",
+      "등"
+    ],
+    "source": "Donna Finando, Trigger Point Therapy for Myofascial Pain: The Practice of Informed Touch",
+    "status": "목차 등록·위치/연관통 미검수"
+  },
+  {
+    "id": "finando-134",
+    "category": "어깨대 근육",
+    "nameKo": "소흉근",
+    "nameEn": "Pectoralis Minor",
+    "page": 134,
+    "regions": [
+      "데콜테",
+      "등"
+    ],
+    "source": "Donna Finando, Trigger Point Therapy for Myofascial Pain: The Practice of Informed Touch",
+    "status": "목차 등록·위치/연관통 미검수"
+  },
+  {
+    "id": "finando-140",
+    "category": "상지 근육",
+    "nameKo": "대흉근",
+    "nameEn": "Pectoralis Major",
+    "page": 140,
+    "regions": [
+      "데콜테",
+      "등"
+    ],
+    "source": "Donna Finando, Trigger Point Therapy for Myofascial Pain: The Practice of Informed Touch",
+    "status": "목차 등록·위치/연관통 미검수"
+  },
+  {
+    "id": "finando-148",
+    "category": "상지 근육",
+    "nameKo": "삼각근",
+    "nameEn": "Deltoid",
+    "page": 148,
+    "regions": [
+      "데콜테",
+      "등"
+    ],
+    "source": "Donna Finando, Trigger Point Therapy for Myofascial Pain: The Practice of Informed Touch",
+    "status": "목차 등록·위치/연관통 미검수"
+  },
+  {
+    "id": "finando-155",
+    "category": "상지 근육",
+    "nameKo": "광배근",
+    "nameEn": "Latissimus Dorsi",
+    "page": 155,
+    "regions": [
+      "데콜테",
+      "등"
+    ],
+    "source": "Donna Finando, Trigger Point Therapy for Myofascial Pain: The Practice of Informed Touch",
+    "status": "목차 등록·위치/연관통 미검수"
+  },
+  {
+    "id": "finando-161",
+    "category": "상지 근육",
+    "nameKo": "대원근",
+    "nameEn": "Teres Major",
+    "page": 161,
+    "regions": [
+      "데콜테",
+      "등"
+    ],
+    "source": "Donna Finando, Trigger Point Therapy for Myofascial Pain: The Practice of Informed Touch",
+    "status": "목차 등록·위치/연관통 미검수"
+  },
+  {
+    "id": "finando-166",
+    "category": "상지 근육",
+    "nameKo": "극상근",
+    "nameEn": "Supraspinatus",
+    "page": 166,
+    "regions": [
+      "데콜테",
+      "등"
+    ],
+    "source": "Donna Finando, Trigger Point Therapy for Myofascial Pain: The Practice of Informed Touch",
+    "status": "목차 등록·위치/연관통 미검수"
+  },
+  {
+    "id": "finando-172",
+    "category": "상지 근육",
+    "nameKo": "극하근",
+    "nameEn": "Infraspinatus",
+    "page": 172,
+    "regions": [
+      "데콜테",
+      "등"
+    ],
+    "source": "Donna Finando, Trigger Point Therapy for Myofascial Pain: The Practice of Informed Touch",
+    "status": "목차 등록·위치/연관통 미검수"
+  },
+  {
+    "id": "finando-178",
+    "category": "상지 근육",
+    "nameKo": "소원근",
+    "nameEn": "Teres Minor",
+    "page": 178,
+    "regions": [
+      "데콜테",
+      "등"
+    ],
+    "source": "Donna Finando, Trigger Point Therapy for Myofascial Pain: The Practice of Informed Touch",
+    "status": "목차 등록·위치/연관통 미검수"
+  },
+  {
+    "id": "finando-183",
+    "category": "상지 근육",
+    "nameKo": "견갑하근",
+    "nameEn": "Subscapularis",
+    "page": 183,
+    "regions": [
+      "데콜테",
+      "등"
+    ],
+    "source": "Donna Finando, Trigger Point Therapy for Myofascial Pain: The Practice of Informed Touch",
+    "status": "목차 등록·위치/연관통 미검수"
+  },
+  {
+    "id": "finando-190",
+    "category": "상지 근육",
+    "nameKo": "상완이두근",
+    "nameEn": "Biceps Brachii",
+    "page": 190,
+    "regions": [
+      "데콜테",
+      "등"
+    ],
+    "source": "Donna Finando, Trigger Point Therapy for Myofascial Pain: The Practice of Informed Touch",
+    "status": "목차 등록·위치/연관통 미검수"
+  },
+  {
+    "id": "finando-196",
+    "category": "상지 근육",
+    "nameKo": "상완삼두근",
+    "nameEn": "Triceps Brachii",
+    "page": 196,
+    "regions": [
+      "데콜테",
+      "등"
+    ],
+    "source": "Donna Finando, Trigger Point Therapy for Myofascial Pain: The Practice of Informed Touch",
+    "status": "목차 등록·위치/연관통 미검수"
+  },
+  {
+    "id": "finando-201",
+    "category": "상지 근육",
+    "nameKo": "상완근",
+    "nameEn": "Brachialis",
+    "page": 201,
+    "regions": [
+      "데콜테",
+      "등"
+    ],
+    "source": "Donna Finando, Trigger Point Therapy for Myofascial Pain: The Practice of Informed Touch",
+    "status": "목차 등록·위치/연관통 미검수"
+  },
+  {
+    "id": "finando-206",
+    "category": "상지 근육",
+    "nameKo": "상완요골근",
+    "nameEn": "Brachioradialis",
+    "page": 206,
+    "regions": [
+      "데콜테",
+      "등"
+    ],
+    "source": "Donna Finando, Trigger Point Therapy for Myofascial Pain: The Practice of Informed Touch",
+    "status": "목차 등록·위치/연관통 미검수"
+  },
+  {
+    "id": "finando-210",
+    "category": "상지 근육",
+    "nameKo": "손·손가락 폄근군",
+    "nameEn": "Hand and Finger Extensors",
+    "page": 210,
+    "regions": [
+      "데콜테",
+      "등"
+    ],
+    "source": "Donna Finando, Trigger Point Therapy for Myofascial Pain: The Practice of Informed Touch",
+    "status": "목차 등록·위치/연관통 미검수"
+  },
+  {
+    "id": "finando-215",
+    "category": "상지 근육",
+    "nameKo": "손·손가락 굽힘근군",
+    "nameEn": "Hand and Finger Flexors",
+    "page": 215,
+    "regions": [
+      "데콜테",
+      "등"
+    ],
+    "source": "Donna Finando, Trigger Point Therapy for Myofascial Pain: The Practice of Informed Touch",
+    "status": "목차 등록·위치/연관통 미검수"
+  },
+  {
+    "id": "finando-221",
+    "category": "몸통 근육",
+    "nameKo": "척추기립근",
+    "nameEn": "Erector Spinae",
+    "page": 221,
+    "regions": [
+      "등",
+      "골반",
+      "복부"
+    ],
+    "source": "Donna Finando, Trigger Point Therapy for Myofascial Pain: The Practice of Informed Touch",
+    "status": "목차 등록·위치/연관통 미검수"
+  },
+  {
+    "id": "finando-229",
+    "category": "몸통 근육",
+    "nameKo": "요방형근",
+    "nameEn": "Quadratus Lumborum",
+    "page": 229,
+    "regions": [
+      "등",
+      "골반",
+      "복부"
+    ],
+    "source": "Donna Finando, Trigger Point Therapy for Myofascial Pain: The Practice of Informed Touch",
+    "status": "목차 등록·위치/연관통 미검수"
+  },
+  {
+    "id": "finando-235",
+    "category": "몸통 근육",
+    "nameKo": "장요근",
+    "nameEn": "Iliopsoas",
+    "page": 235,
+    "regions": [
+      "등",
+      "골반",
+      "복부"
+    ],
+    "source": "Donna Finando, Trigger Point Therapy for Myofascial Pain: The Practice of Informed Touch",
+    "status": "목차 등록·위치/연관통 미검수"
+  },
+  {
+    "id": "finando-242",
+    "category": "몸통 근육",
+    "nameKo": "복직근",
+    "nameEn": "Rectus Abdominis",
+    "page": 242,
+    "regions": [
+      "등",
+      "골반",
+      "복부"
+    ],
+    "source": "Donna Finando, Trigger Point Therapy for Myofascial Pain: The Practice of Informed Touch",
+    "status": "목차 등록·위치/연관통 미검수"
+  },
+  {
+    "id": "finando-250",
+    "category": "몸통 근육",
+    "nameKo": "복부 근육군",
+    "nameEn": "Abdominals",
+    "page": 250,
+    "regions": [
+      "등",
+      "골반",
+      "복부"
+    ],
+    "source": "Donna Finando, Trigger Point Therapy for Myofascial Pain: The Practice of Informed Touch",
+    "status": "목차 등록·위치/연관통 미검수"
+  },
+  {
+    "id": "finando-259",
+    "category": "하지 근육",
+    "nameKo": "대둔근",
+    "nameEn": "Gluteus Maximus",
+    "page": 259,
+    "regions": [
+      "엉덩이",
+      "골반",
+      "다리"
+    ],
+    "source": "Donna Finando, Trigger Point Therapy for Myofascial Pain: The Practice of Informed Touch",
+    "status": "목차 등록·위치/연관통 미검수"
+  },
+  {
+    "id": "finando-264",
+    "category": "하지 근육",
+    "nameKo": "중둔근",
+    "nameEn": "Gluteus Medius",
+    "page": 264,
+    "regions": [
+      "엉덩이",
+      "골반",
+      "다리"
+    ],
+    "source": "Donna Finando, Trigger Point Therapy for Myofascial Pain: The Practice of Informed Touch",
+    "status": "목차 등록·위치/연관통 미검수"
+  },
+  {
+    "id": "finando-269",
+    "category": "하지 근육",
+    "nameKo": "소둔근",
+    "nameEn": "Gluteus Minimus",
+    "page": 269,
+    "regions": [
+      "엉덩이",
+      "골반",
+      "다리"
+    ],
+    "source": "Donna Finando, Trigger Point Therapy for Myofascial Pain: The Practice of Informed Touch",
+    "status": "목차 등록·위치/연관통 미검수"
+  },
+  {
+    "id": "finando-276",
+    "category": "하지 근육",
+    "nameKo": "대퇴근막장근",
+    "nameEn": "Tensor Fasciae Latae",
+    "page": 276,
+    "regions": [
+      "엉덩이",
+      "골반",
+      "다리"
+    ],
+    "source": "Donna Finando, Trigger Point Therapy for Myofascial Pain: The Practice of Informed Touch",
+    "status": "목차 등록·위치/연관통 미검수"
+  },
+  {
+    "id": "finando-281",
+    "category": "하지 근육",
+    "nameKo": "이상근",
+    "nameEn": "Piriformis",
+    "page": 281,
+    "regions": [
+      "엉덩이",
+      "골반",
+      "다리"
+    ],
+    "source": "Donna Finando, Trigger Point Therapy for Myofascial Pain: The Practice of Informed Touch",
+    "status": "목차 등록·위치/연관통 미검수"
+  },
+  {
+    "id": "finando-287",
+    "category": "하지 근육",
+    "nameKo": "햄스트링근군",
+    "nameEn": "Hamstrings",
+    "page": 287,
+    "regions": [
+      "엉덩이",
+      "골반",
+      "다리"
+    ],
+    "source": "Donna Finando, Trigger Point Therapy for Myofascial Pain: The Practice of Informed Touch",
+    "status": "목차 등록·위치/연관통 미검수"
+  },
+  {
+    "id": "finando-298",
+    "category": "하지 근육",
+    "nameKo": "대퇴사두근",
+    "nameEn": "Quadriceps",
+    "page": 298,
+    "regions": [
+      "엉덩이",
+      "골반",
+      "다리"
+    ],
+    "source": "Donna Finando, Trigger Point Therapy for Myofascial Pain: The Practice of Informed Touch",
+    "status": "목차 등록·위치/연관통 미검수"
+  },
+  {
+    "id": "finando-309",
+    "category": "하지 근육",
+    "nameKo": "내전근군",
+    "nameEn": "Adductors",
+    "page": 309,
+    "regions": [
+      "엉덩이",
+      "골반",
+      "다리"
+    ],
+    "source": "Donna Finando, Trigger Point Therapy for Myofascial Pain: The Practice of Informed Touch",
+    "status": "목차 등록·위치/연관통 미검수"
+  },
+  {
+    "id": "finando-317",
+    "category": "하지 근육",
+    "nameKo": "치골근",
+    "nameEn": "Pectineus",
+    "page": 317,
+    "regions": [
+      "엉덩이",
+      "골반",
+      "다리"
+    ],
+    "source": "Donna Finando, Trigger Point Therapy for Myofascial Pain: The Practice of Informed Touch",
+    "status": "목차 등록·위치/연관통 미검수"
+  },
+  {
+    "id": "finando-322",
+    "category": "하지 근육",
+    "nameKo": "박근",
+    "nameEn": "Gracilis",
+    "page": 322,
+    "regions": [
+      "엉덩이",
+      "골반",
+      "다리"
+    ],
+    "source": "Donna Finando, Trigger Point Therapy for Myofascial Pain: The Practice of Informed Touch",
+    "status": "목차 등록·위치/연관통 미검수"
+  },
+  {
+    "id": "finando-326",
+    "category": "하지 근육",
+    "nameKo": "봉공근",
+    "nameEn": "Sartorius",
+    "page": 326,
+    "regions": [
+      "엉덩이",
+      "골반",
+      "다리"
+    ],
+    "source": "Donna Finando, Trigger Point Therapy for Myofascial Pain: The Practice of Informed Touch",
+    "status": "목차 등록·위치/연관통 미검수"
+  },
+  {
+    "id": "finando-330",
+    "category": "하지 근육",
+    "nameKo": "슬와근",
+    "nameEn": "Popliteus",
+    "page": 330,
+    "regions": [
+      "엉덩이",
+      "골반",
+      "다리"
+    ],
+    "source": "Donna Finando, Trigger Point Therapy for Myofascial Pain: The Practice of Informed Touch",
+    "status": "목차 등록·위치/연관통 미검수"
+  },
+  {
+    "id": "finando-334",
+    "category": "하지 근육",
+    "nameKo": "비복근",
+    "nameEn": "Gastrocnemius",
+    "page": 334,
+    "regions": [
+      "엉덩이",
+      "골반",
+      "다리"
+    ],
+    "source": "Donna Finando, Trigger Point Therapy for Myofascial Pain: The Practice of Informed Touch",
+    "status": "목차 등록·위치/연관통 미검수"
+  },
+  {
+    "id": "finando-339",
+    "category": "하지 근육",
+    "nameKo": "가자미근",
+    "nameEn": "Soleus",
+    "page": 339,
+    "regions": [
+      "엉덩이",
+      "골반",
+      "다리"
+    ],
+    "source": "Donna Finando, Trigger Point Therapy for Myofascial Pain: The Practice of Informed Touch",
+    "status": "목차 등록·위치/연관통 미검수"
+  },
+  {
+    "id": "finando-345",
+    "category": "하지 근육",
+    "nameKo": "후경골근",
+    "nameEn": "Tibialis Posterior",
+    "page": 345,
+    "regions": [
+      "엉덩이",
+      "골반",
+      "다리"
+    ],
+    "source": "Donna Finando, Trigger Point Therapy for Myofascial Pain: The Practice of Informed Touch",
+    "status": "목차 등록·위치/연관통 미검수"
+  },
+  {
+    "id": "finando-349",
+    "category": "하지 근육",
+    "nameKo": "전경골근",
+    "nameEn": "Tibialis Anterior",
+    "page": 349,
+    "regions": [
+      "엉덩이",
+      "골반",
+      "다리"
+    ],
+    "source": "Donna Finando, Trigger Point Therapy for Myofascial Pain: The Practice of Informed Touch",
+    "status": "목차 등록·위치/연관통 미검수"
+  },
+  {
+    "id": "finando-356",
+    "category": "하지 근육",
+    "nameKo": "비골근군",
+    "nameEn": "Peroneal Muscles",
+    "page": 356,
+    "regions": [
+      "엉덩이",
+      "골반",
+      "다리"
+    ],
+    "source": "Donna Finando, Trigger Point Therapy for Myofascial Pain: The Practice of Informed Touch",
+    "status": "목차 등록·위치/연관통 미검수"
+  },
+  {
+    "id": "finando-363",
+    "category": "하지 근육",
+    "nameKo": "발가락 긴폄근군",
+    "nameEn": "Long Extensors of the Toes",
+    "page": 363,
+    "regions": [
+      "엉덩이",
+      "골반",
+      "다리"
+    ],
+    "source": "Donna Finando, Trigger Point Therapy for Myofascial Pain: The Practice of Informed Touch",
+    "status": "목차 등록·위치/연관통 미검수"
+  },
+  {
+    "id": "finando-370",
+    "category": "하지 근육",
+    "nameKo": "발가락 긴굽힘근군",
+    "nameEn": "Long Flexors of the Toes",
+    "page": 370,
+    "regions": [
+      "엉덩이",
+      "골반",
+      "다리"
+    ],
+    "source": "Donna Finando, Trigger Point Therapy for Myofascial Pain: The Practice of Informed Touch",
+    "status": "목차 등록·위치/연관통 미검수"
+  }
+]

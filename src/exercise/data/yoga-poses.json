@@ -1,0 +1,1817 @@
+{
+  "schemaVersion": 1,
+  "imagePolicy": "review-before-publish",
+  "poses": [
+    {
+      "id": "yoga-tadasana",
+      "sanskrit": "Tadasana",
+      "nameKo": "산 자세",
+      "nameEn": "Tadasana",
+      "categories": [
+        "스탠딩",
+        "기본 정렬"
+      ],
+      "difficulty": "unspecified",
+      "image": "/yoga-photos/mountain.jpg",
+      "imageLicense": "CC BY-SA 4.0",
+      "imageCredit": "Mr. Yoga",
+      "sideMode": "none",
+      "defaultBeats": 8,
+      "reviewStatus": "name-needs-review",
+      "imageSource": "https://raw.githubusercontent.com/jreinjr/yoga-pose-photos/main/mountain.jpg"
+    },
+    {
+      "id": "yoga-utkatasana",
+      "sanskrit": "Utkatasana",
+      "nameKo": "의자 자세",
+      "nameEn": "Utkatasana",
+      "categories": [
+        "스탠딩",
+        "하체 강화"
+      ],
+      "difficulty": "unspecified",
+      "image": "/yoga/yoga-utkatasana.png",
+      "imageLicense": "review-required",
+      "imageCredit": "Yoga API by Alexandre C. — review asset-specific credits",
+      "sideMode": "none",
+      "defaultBeats": 8,
+      "reviewStatus": "name-needs-review",
+      "imageSource": "Yoga API",
+      "imageSourceUrl": "https://res.cloudinary.com/dko1be2jy/image/upload/fl_sanitize/v1676483078/yoga-api/9_ewvoun.png",
+      "imageReviewStatus": "needs-visual-and-license-review"
+    },
+    {
+      "id": "yoga-uttanasana",
+      "sanskrit": "Uttanasana",
+      "nameKo": "서서 전굴",
+      "nameEn": "Uttanasana",
+      "categories": [
+        "스탠딩",
+        "전굴"
+      ],
+      "difficulty": "unspecified",
+      "image": null,
+      "imageLicense": null,
+      "imageCredit": null,
+      "sideMode": "none",
+      "defaultBeats": 8,
+      "reviewStatus": "name-needs-review"
+    },
+    {
+      "id": "yoga-parsvottanasana",
+      "sanskrit": "Parsvottanasana",
+      "nameKo": "피라미드 자세",
+      "nameEn": "Parsvottanasana",
+      "categories": [
+        "스탠딩",
+        "전굴",
+        "비대칭"
+      ],
+      "difficulty": "unspecified",
+      "image": "/yoga/yoga-parsvottanasana.png",
+      "imageLicense": "review-required",
+      "imageCredit": "Yoga API by Alexandre C. — review asset-specific credits",
+      "sideMode": "none",
+      "defaultBeats": 8,
+      "reviewStatus": "name-needs-review",
+      "imageSource": "Yoga API",
+      "imageSourceUrl": "https://res.cloudinary.com/dko1be2jy/image/upload/fl_sanitize/v1676483089/yoga-api/28_uu58tt.png",
+      "imageReviewStatus": "needs-visual-and-license-review"
+    },
+    {
+      "id": "yoga-prasarita-padottanasana",
+      "sanskrit": "Prasarita Padottanasana",
+      "nameKo": "다리 넓게 벌린 전굴",
+      "nameEn": "Prasarita Padottanasana",
+      "categories": [
+        "스탠딩",
+        "전굴"
+      ],
+      "difficulty": "unspecified",
+      "image": null,
+      "imageLicense": null,
+      "imageCredit": null,
+      "sideMode": "none",
+      "defaultBeats": 8,
+      "reviewStatus": "name-needs-review"
+    },
+    {
+      "id": "yoga-virabhadrasana-i",
+      "sanskrit": "Virabhadrasana I",
+      "nameKo": "전사 1",
+      "nameEn": "Virabhadrasana I",
+      "categories": [
+        "스탠딩",
+        "런지"
+      ],
+      "difficulty": "unspecified",
+      "image": "/yoga-photos/warrior-1.jpg",
+      "imageLicense": "CC BY-SA 3.0",
+      "imageCredit": "OrenBochman",
+      "sideMode": "selectable",
+      "defaultBeats": 8,
+      "reviewStatus": "name-needs-review",
+      "imageSource": "https://raw.githubusercontent.com/jreinjr/yoga-pose-photos/main/warrior-1.jpg",
+      "imageSourceUrl": "https://res.cloudinary.com/dko1be2jy/image/upload/fl_sanitize/v1676483096/yoga-api/44_dqeayo.png",
+      "imageReviewStatus": "needs-visual-and-license-review"
+    },
+    {
+      "id": "yoga-virabhadrasana-ii",
+      "sanskrit": "Virabhadrasana II",
+      "nameKo": "전사 2",
+      "nameEn": "Virabhadrasana II",
+      "categories": [
+        "스탠딩",
+        "런지"
+      ],
+      "difficulty": "unspecified",
+      "image": "/yoga-photos/warrior-2.jpg",
+      "imageLicense": "CC BY 2.0",
+      "imageCredit": "lululemon athletica",
+      "sideMode": "selectable",
+      "defaultBeats": 8,
+      "reviewStatus": "name-needs-review",
+      "imageSource": "https://raw.githubusercontent.com/jreinjr/yoga-pose-photos/main/warrior-2.jpg",
+      "imageSourceUrl": "https://res.cloudinary.com/dko1be2jy/image/upload/fl_sanitize/v1676483096/yoga-api/45_ehimr1.png",
+      "imageReviewStatus": "needs-visual-and-license-review"
+    },
+    {
+      "id": "yoga-utthita-parsvakonasana",
+      "sanskrit": "Utthita Parsvakonasana",
+      "nameKo": "확장 측각 자세",
+      "nameEn": "Utthita Parsvakonasana",
+      "categories": [
+        "스탠딩",
+        "측면 신장"
+      ],
+      "difficulty": "unspecified",
+      "image": "/yoga/yoga-utthita-parsvakonasana.png",
+      "imageLicense": "review-required",
+      "imageCredit": "Yoga API by Alexandre C. — review asset-specific credits",
+      "sideMode": "selectable",
+      "defaultBeats": 8,
+      "reviewStatus": "name-needs-review",
+      "imageSource": "Yoga API",
+      "imageSourceUrl": "https://res.cloudinary.com/dko1be2jy/image/upload/fl_sanitize/v1676483083/yoga-api/18_aqufak.png",
+      "imageReviewStatus": "needs-visual-and-license-review"
+    },
+    {
+      "id": "yoga-utthita-trikonasana",
+      "sanskrit": "Utthita Trikonasana",
+      "nameKo": "확장 삼각 자세",
+      "nameEn": "Utthita Trikonasana",
+      "categories": [
+        "스탠딩",
+        "측면 신장"
+      ],
+      "difficulty": "unspecified",
+      "image": "/yoga-photos/triangle.jpg",
+      "imageLicense": "CC BY-SA 3.0",
+      "imageCredit": "Thamizhpparithi Maari",
+      "sideMode": "none",
+      "defaultBeats": 8,
+      "reviewStatus": "name-needs-review",
+      "imageSource": "https://raw.githubusercontent.com/jreinjr/yoga-pose-photos/main/triangle.jpg"
+    },
+    {
+      "id": "yoga-parivrtta-trikonasana",
+      "sanskrit": "Parivrtta Trikonasana",
+      "nameKo": "회전 삼각 자세",
+      "nameEn": "Parivrtta Trikonasana",
+      "categories": [
+        "스탠딩",
+        "트위스트"
+      ],
+      "difficulty": "unspecified",
+      "image": null,
+      "imageLicense": null,
+      "imageCredit": null,
+      "sideMode": "selectable",
+      "defaultBeats": 8,
+      "reviewStatus": "name-needs-review"
+    },
+    {
+      "id": "yoga-parivrtta-parsvakonasana",
+      "sanskrit": "Parivrtta Parsvakonasana",
+      "nameKo": "회전 측각 자세",
+      "nameEn": "Parivrtta Parsvakonasana",
+      "categories": [
+        "스탠딩",
+        "트위스트"
+      ],
+      "difficulty": "unspecified",
+      "image": null,
+      "imageLicense": null,
+      "imageCredit": null,
+      "sideMode": "selectable",
+      "defaultBeats": 8,
+      "reviewStatus": "name-needs-review"
+    },
+    {
+      "id": "yoga-vrksasana",
+      "sanskrit": "Vrksasana",
+      "nameKo": "나무 자세",
+      "nameEn": "Vrksasana",
+      "categories": [
+        "스탠딩",
+        "균형"
+      ],
+      "difficulty": "unspecified",
+      "image": "/yoga-photos/tree.jpg",
+      "imageLicense": "CC BY-SA 4.0",
+      "imageCredit": "Camilasuga",
+      "sideMode": "selectable",
+      "defaultBeats": 8,
+      "reviewStatus": "name-needs-review",
+      "imageSource": "https://raw.githubusercontent.com/jreinjr/yoga-pose-photos/main/tree.jpg",
+      "imageSourceUrl": "https://res.cloudinary.com/dko1be2jy/image/upload/fl_sanitize/v1676483094/yoga-api/41_veknug.png",
+      "imageReviewStatus": "needs-visual-and-license-review"
+    },
+    {
+      "id": "yoga-utthita-hasta-padangusthasana",
+      "sanskrit": "Utthita Hasta Padangusthasana",
+      "nameKo": "서서 엄지발가락 잡기",
+      "nameEn": "Utthita Hasta Padangusthasana",
+      "categories": [
+        "스탠딩",
+        "균형"
+      ],
+      "difficulty": "unspecified",
+      "image": "/yoga/yoga-utthita-hasta-padangusthasana.png",
+      "imageLicense": "review-required",
+      "imageCredit": "Yoga API by Alexandre C. — review asset-specific credits",
+      "sideMode": "selectable",
+      "defaultBeats": 8,
+      "reviewStatus": "name-needs-review",
+      "imageSource": "Yoga API",
+      "imageSourceUrl": "https://res.cloudinary.com/dko1be2jy/image/upload/fl_sanitize/v1676483084/yoga-api/17_l9joyu.png",
+      "imageReviewStatus": "needs-visual-and-license-review"
+    },
+    {
+      "id": "yoga-ardha-chandrasana",
+      "sanskrit": "Ardha Chandrasana",
+      "nameKo": "반달 자세",
+      "nameEn": "Ardha Chandrasana",
+      "categories": [
+        "스탠딩",
+        "균형"
+      ],
+      "difficulty": "unspecified",
+      "image": "/yoga/yoga-ardha-chandrasana.png",
+      "imageLicense": "review-required",
+      "imageCredit": "Yoga API by Alexandre C. — review asset-specific credits",
+      "sideMode": "selectable",
+      "defaultBeats": 8,
+      "reviewStatus": "name-needs-review",
+      "imageSource": "Yoga API",
+      "imageSourceUrl": "https://res.cloudinary.com/dko1be2jy/image/upload/fl_sanitize/v1676483085/yoga-api/21_etedlp.png",
+      "imageReviewStatus": "needs-visual-and-license-review"
+    },
+    {
+      "id": "yoga-virabhadrasana-iii",
+      "sanskrit": "Virabhadrasana III",
+      "nameKo": "전사 3",
+      "nameEn": "Virabhadrasana III",
+      "categories": [
+        "스탠딩",
+        "균형"
+      ],
+      "difficulty": "unspecified",
+      "image": "/yoga/yoga-virabhadrasana-iii.png",
+      "imageLicense": "review-required",
+      "imageCredit": "Yoga API by Alexandre C. — review asset-specific credits",
+      "sideMode": "selectable",
+      "defaultBeats": 8,
+      "reviewStatus": "name-needs-review",
+      "imageSource": "Yoga API",
+      "imageSourceUrl": "https://res.cloudinary.com/dko1be2jy/image/upload/fl_sanitize/v1676483097/yoga-api/46_lz6v7i.png",
+      "imageReviewStatus": "needs-visual-and-license-review"
+    },
+    {
+      "id": "yoga-parivrtta-ardha-chandrasana",
+      "sanskrit": "Parivrtta Ardha Chandrasana",
+      "nameKo": "회전 반달 자세",
+      "nameEn": "Parivrtta Ardha Chandrasana",
+      "categories": [
+        "스탠딩",
+        "균형",
+        "트위스트"
+      ],
+      "difficulty": "unspecified",
+      "image": null,
+      "imageLicense": null,
+      "imageCredit": null,
+      "sideMode": "selectable",
+      "defaultBeats": 8,
+      "reviewStatus": "name-needs-review"
+    },
+    {
+      "id": "yoga-garudasana",
+      "sanskrit": "Garudasana",
+      "nameKo": "독수리 자세",
+      "nameEn": "Garudasana",
+      "categories": [
+        "스탠딩",
+        "균형"
+      ],
+      "difficulty": "unspecified",
+      "image": "/yoga/yoga-garudasana.png",
+      "imageLicense": "review-required",
+      "imageCredit": "Yoga API by Alexandre C. — review asset-specific credits",
+      "sideMode": "none",
+      "defaultBeats": 8,
+      "reviewStatus": "name-needs-review",
+      "imageSource": "Yoga API",
+      "imageSourceUrl": "https://res.cloudinary.com/dko1be2jy/image/upload/fl_sanitize/v1676483081/yoga-api/16_g7ueht.png",
+      "imageReviewStatus": "needs-visual-and-license-review"
+    },
+    {
+      "id": "yoga-dandasana",
+      "sanskrit": "Dandasana",
+      "nameKo": "막대 자세",
+      "nameEn": "Dandasana",
+      "categories": [
+        "전굴",
+        "기본 정렬",
+        "앉은 자세"
+      ],
+      "difficulty": "unspecified",
+      "image": null,
+      "imageLicense": null,
+      "imageCredit": null,
+      "sideMode": "none",
+      "defaultBeats": 8,
+      "reviewStatus": "name-needs-review"
+    },
+    {
+      "id": "yoga-paschimottanasana",
+      "sanskrit": "Paschimottanasana",
+      "nameKo": "앉아서 앞으로 숙이기",
+      "nameEn": "Paschimottanasana",
+      "categories": [
+        "전굴",
+        "앉은 자세"
+      ],
+      "difficulty": "unspecified",
+      "image": "/yoga/yoga-paschimottanasana.png",
+      "imageLicense": "review-required",
+      "imageCredit": "Yoga API by Alexandre C. — review asset-specific credits",
+      "sideMode": "none",
+      "defaultBeats": 8,
+      "reviewStatus": "name-needs-review",
+      "imageSource": "Yoga API",
+      "imageSourceUrl": "https://res.cloudinary.com/dko1be2jy/image/upload/fl_sanitize/v1676483091/yoga-api/30_gumpl3.png",
+      "imageReviewStatus": "needs-visual-and-license-review"
+    },
+    {
+      "id": "yoga-janu-sirsasana",
+      "sanskrit": "Janu Sirsasana",
+      "nameKo": "머리 무릎 자세",
+      "nameEn": "Janu Sirsasana",
+      "categories": [
+        "전굴",
+        "비대칭",
+        "앉은 자세"
+      ],
+      "difficulty": "unspecified",
+      "image": null,
+      "imageLicense": null,
+      "imageCredit": null,
+      "sideMode": "selectable",
+      "defaultBeats": 8,
+      "reviewStatus": "name-needs-review"
+    },
+    {
+      "id": "yoga-triang-mukhaikapada-paschimottanasana",
+      "sanskrit": "Triang Mukhaikapada Paschimottanasana",
+      "nameKo": "한쪽 다리 뒤로 접은 전굴",
+      "nameEn": "Triang Mukhaikapada Paschimottanasana",
+      "categories": [
+        "전굴",
+        "비대칭",
+        "앉은 자세"
+      ],
+      "difficulty": "unspecified",
+      "image": null,
+      "imageLicense": null,
+      "imageCredit": null,
+      "sideMode": "none",
+      "defaultBeats": 8,
+      "reviewStatus": "name-needs-review"
+    },
+    {
+      "id": "yoga-krounchasana",
+      "sanskrit": "Krounchasana",
+      "nameKo": "왜가리 자세",
+      "nameEn": "Krounchasana",
+      "categories": [
+        "전굴",
+        "비대칭",
+        "앉은 자세"
+      ],
+      "difficulty": "unspecified",
+      "image": null,
+      "imageLicense": null,
+      "imageCredit": null,
+      "sideMode": "none",
+      "defaultBeats": 8,
+      "reviewStatus": "name-needs-review"
+    },
+    {
+      "id": "yoga-ardha-baddha-padma-paschimottanasana",
+      "sanskrit": "Ardha Baddha Padma Paschimottanasana",
+      "nameKo": "반 결가부좌 전굴",
+      "nameEn": "Ardha Baddha Padma Paschimottanasana",
+      "categories": [
+        "전굴",
+        "비대칭",
+        "앉은 자세"
+      ],
+      "difficulty": "unspecified",
+      "image": null,
+      "imageLicense": null,
+      "imageCredit": null,
+      "sideMode": "selectable",
+      "defaultBeats": 8,
+      "reviewStatus": "name-needs-review"
+    },
+    {
+      "id": "yoga-navasana",
+      "sanskrit": "Navasana",
+      "nameKo": "보트 자세",
+      "nameEn": "Navasana",
+      "categories": [
+        "전굴",
+        "코어",
+        "균형"
+      ],
+      "difficulty": "unspecified",
+      "image": "/yoga/yoga-navasana.png",
+      "imageLicense": "review-required",
+      "imageCredit": "Yoga API by Alexandre C. — review asset-specific credits",
+      "sideMode": "none",
+      "defaultBeats": 8,
+      "reviewStatus": "name-needs-review",
+      "imageSource": "Yoga API",
+      "imageSourceUrl": "https://res.cloudinary.com/dko1be2jy/image/upload/fl_sanitize/v1676483071/yoga-api/1_txmirf.png",
+      "imageReviewStatus": "needs-visual-and-license-review"
+    },
+    {
+      "id": "yoga-ubhaya-padangusthasana",
+      "sanskrit": "Ubhaya Padangusthasana",
+      "nameKo": "양쪽 엄지발가락 잡기 균형",
+      "nameEn": "Ubhaya Padangusthasana",
+      "categories": [
+        "전굴",
+        "코어",
+        "균형"
+      ],
+      "difficulty": "unspecified",
+      "image": null,
+      "imageLicense": null,
+      "imageCredit": null,
+      "sideMode": "none",
+      "defaultBeats": 8,
+      "reviewStatus": "name-needs-review"
+    },
+    {
+      "id": "yoga-salabhasana",
+      "sanskrit": "Salabhasana",
+      "nameKo": "메뚜기 자세",
+      "nameEn": "Salabhasana",
+      "categories": [
+        "후굴",
+        "엎드린 자세"
+      ],
+      "difficulty": "unspecified",
+      "image": null,
+      "imageLicense": null,
+      "imageCredit": null,
+      "sideMode": "none",
+      "defaultBeats": 8,
+      "reviewStatus": "name-needs-review"
+    },
+    {
+      "id": "yoga-urdhva-mukha-svanasana",
+      "sanskrit": "Urdhva Mukha Svanasana",
+      "nameKo": "업독",
+      "nameEn": "Urdhva Mukha Svanasana",
+      "categories": [
+        "후굴",
+        "팔 지지"
+      ],
+      "difficulty": "unspecified",
+      "image": "/yoga/yoga-urdhva-mukha-svanasana.png",
+      "imageLicense": "review-required",
+      "imageCredit": "Yoga API by Alexandre C. — review asset-specific credits",
+      "sideMode": "none",
+      "defaultBeats": 8,
+      "reviewStatus": "name-needs-review",
+      "imageSource": "Yoga API",
+      "imageSourceUrl": "https://res.cloudinary.com/dko1be2jy/image/upload/fl_sanitize/v1676483096/yoga-api/43_m3nxjk.png",
+      "imageReviewStatus": "needs-visual-and-license-review"
+    },
+    {
+      "id": "yoga-dhanurasana",
+      "sanskrit": "Dhanurasana",
+      "nameKo": "활 자세",
+      "nameEn": "Dhanurasana",
+      "categories": [
+        "후굴",
+        "엎드린 자세"
+      ],
+      "difficulty": "unspecified",
+      "image": "/yoga/yoga-dhanurasana.png",
+      "imageLicense": "review-required",
+      "imageCredit": "Yoga API by Alexandre C. — review asset-specific credits",
+      "sideMode": "none",
+      "defaultBeats": 8,
+      "reviewStatus": "name-needs-review",
+      "imageSource": "Yoga API",
+      "imageSourceUrl": "https://res.cloudinary.com/dko1be2jy/image/upload/fl_sanitize/v1676483072/yoga-api/3_aa0fgk.png",
+      "imageReviewStatus": "needs-visual-and-license-review"
+    },
+    {
+      "id": "yoga-ustrasana",
+      "sanskrit": "Ustrasana",
+      "nameKo": "낙타 자세",
+      "nameEn": "Ustrasana",
+      "categories": [
+        "후굴",
+        "무릎 자세"
+      ],
+      "difficulty": "unspecified",
+      "image": "/yoga/yoga-ustrasana.png",
+      "imageLicense": "review-required",
+      "imageCredit": "Yoga API by Alexandre C. — review asset-specific credits",
+      "sideMode": "none",
+      "defaultBeats": 8,
+      "reviewStatus": "name-needs-review",
+      "imageSource": "Yoga API",
+      "imageSourceUrl": "https://res.cloudinary.com/dko1be2jy/image/upload/fl_sanitize/v1676483075/yoga-api/6_ri1w0e.png",
+      "imageReviewStatus": "needs-visual-and-license-review"
+    },
+    {
+      "id": "yoga-purvottanasana",
+      "sanskrit": "Purvottanasana",
+      "nameKo": "리버스 플랭크",
+      "nameEn": "Purvottanasana",
+      "categories": [
+        "후굴",
+        "코어",
+        "팔 지지"
+      ],
+      "difficulty": "unspecified",
+      "image": null,
+      "imageLicense": null,
+      "imageCredit": null,
+      "sideMode": "none",
+      "defaultBeats": 8,
+      "reviewStatus": "name-needs-review"
+    },
+    {
+      "id": "yoga-setu-bandha-sarvangasana",
+      "sanskrit": "Setu Bandha Sarvangasana",
+      "nameKo": "브리지 자세",
+      "nameEn": "Setu Bandha Sarvangasana",
+      "categories": [
+        "후굴",
+        "누운 자세"
+      ],
+      "difficulty": "unspecified",
+      "image": "/yoga-photos/bridge.jpg",
+      "imageLicense": "CC BY 3.0",
+      "imageCredit": "Biswarup Ganguly",
+      "sideMode": "none",
+      "defaultBeats": 8,
+      "reviewStatus": "name-needs-review",
+      "imageSource": "https://raw.githubusercontent.com/jreinjr/yoga-pose-photos/main/bridge.jpg",
+      "imageSourceUrl": "https://res.cloudinary.com/dko1be2jy/image/upload/fl_sanitize/v1676483074/yoga-api/4_qq6nxw.png",
+      "imageReviewStatus": "needs-visual-and-license-review"
+    },
+    {
+      "id": "yoga-urdhva-dhanurasana",
+      "sanskrit": "Urdhva Dhanurasana",
+      "nameKo": "휠 자세",
+      "nameEn": "Urdhva Dhanurasana",
+      "categories": [
+        "후굴",
+        "고급"
+      ],
+      "difficulty": "advanced",
+      "image": "/yoga/yoga-urdhva-dhanurasana.png",
+      "imageLicense": "review-required",
+      "imageCredit": "Yoga API by Alexandre C. — review asset-specific credits",
+      "sideMode": "none",
+      "defaultBeats": 8,
+      "reviewStatus": "name-needs-review",
+      "imageSource": "Yoga API",
+      "imageSourceUrl": "https://res.cloudinary.com/dko1be2jy/image/upload/fl_sanitize/v1676483097/yoga-api/47_w2jsof.png",
+      "imageReviewStatus": "needs-visual-and-license-review"
+    },
+    {
+      "id": "yoga-eka-pada-raja-kapotasana",
+      "sanskrit": "Eka Pada Raja Kapotasana",
+      "nameKo": "한 다리 왕비둘기 자세",
+      "nameEn": "Eka Pada Raja Kapotasana",
+      "categories": [
+        "후굴",
+        "힙 오프너",
+        "고급"
+      ],
+      "difficulty": "advanced",
+      "image": null,
+      "imageLicense": null,
+      "imageCredit": null,
+      "sideMode": "selectable",
+      "defaultBeats": 8,
+      "reviewStatus": "name-needs-review"
+    },
+    {
+      "id": "yoga-natarajasana",
+      "sanskrit": "Natarajasana",
+      "nameKo": "댄서 자세",
+      "nameEn": "Natarajasana",
+      "categories": [
+        "후굴",
+        "스탠딩",
+        "균형"
+      ],
+      "difficulty": "unspecified",
+      "image": null,
+      "imageLicense": null,
+      "imageCredit": null,
+      "sideMode": "selectable",
+      "defaultBeats": 8,
+      "reviewStatus": "name-needs-review"
+    },
+    {
+      "id": "yoga-sukhasana",
+      "sanskrit": "Sukhasana",
+      "nameKo": "편안한 앉은 자세",
+      "nameEn": "Sukhasana",
+      "categories": [
+        "힙 오프너",
+        "앉은 자세",
+        "회복·휴식"
+      ],
+      "difficulty": "unspecified",
+      "image": null,
+      "imageLicense": null,
+      "imageCredit": null,
+      "sideMode": "none",
+      "defaultBeats": 8,
+      "reviewStatus": "name-needs-review"
+    },
+    {
+      "id": "yoga-baddha-konasana",
+      "sanskrit": "Baddha Konasana",
+      "nameKo": "나비 자세",
+      "nameEn": "Baddha Konasana",
+      "categories": [
+        "힙 오프너",
+        "앉은 자세"
+      ],
+      "difficulty": "unspecified",
+      "image": "/yoga/yoga-baddha-konasana.png",
+      "imageLicense": "review-required",
+      "imageCredit": "Yoga API by Alexandre C. — review asset-specific credits",
+      "sideMode": "none",
+      "defaultBeats": 8,
+      "reviewStatus": "name-needs-review",
+      "imageSource": "Yoga API",
+      "imageSourceUrl": "https://res.cloudinary.com/dko1be2jy/image/upload/fl_sanitize/v1676483074/yoga-api/5_i64gif.png",
+      "imageReviewStatus": "needs-visual-and-license-review"
+    },
+    {
+      "id": "yoga-upavistha-konasana",
+      "sanskrit": "Upavistha Konasana",
+      "nameKo": "앉아 다리 넓게 벌리기",
+      "nameEn": "Upavistha Konasana",
+      "categories": [
+        "힙 오프너",
+        "전굴",
+        "앉은 자세"
+      ],
+      "difficulty": "unspecified",
+      "image": "/yoga/yoga-upavistha-konasana.png",
+      "imageLicense": "review-required",
+      "imageCredit": "Yoga API by Alexandre C. — review asset-specific credits",
+      "sideMode": "none",
+      "defaultBeats": 8,
+      "reviewStatus": "name-needs-review",
+      "imageSource": "Yoga API",
+      "imageSourceUrl": "https://res.cloudinary.com/dko1be2jy/image/upload/fl_sanitize/v1676483093/yoga-api/40_dkmow6.png",
+      "imageReviewStatus": "needs-visual-and-license-review"
+    },
+    {
+      "id": "yoga-supta-padangusthasana-a",
+      "sanskrit": "Supta Padangusthasana A",
+      "nameKo": "누워서 엄지발가락 잡기 A",
+      "nameEn": "Supta Padangusthasana A",
+      "categories": [
+        "힙 오프너",
+        "누운 자세"
+      ],
+      "difficulty": "unspecified",
+      "image": null,
+      "imageLicense": null,
+      "imageCredit": null,
+      "sideMode": "none",
+      "defaultBeats": 8,
+      "reviewStatus": "name-needs-review"
+    },
+    {
+      "id": "yoga-supta-padangusthasana-b",
+      "sanskrit": "Supta Padangusthasana B",
+      "nameKo": "누워서 다리 옆으로 벌리기 B",
+      "nameEn": "Supta Padangusthasana B",
+      "categories": [
+        "힙 오프너",
+        "누운 자세"
+      ],
+      "difficulty": "unspecified",
+      "image": null,
+      "imageLicense": null,
+      "imageCredit": null,
+      "sideMode": "none",
+      "defaultBeats": 8,
+      "reviewStatus": "name-needs-review"
+    },
+    {
+      "id": "yoga-supta-padangusthasana-bent-knee",
+      "sanskrit": "Supta Padangusthasana Bent-knee",
+      "nameKo": "누워서 엄지발가락 잡기 무릎 굽힘",
+      "nameEn": "Supta Padangusthasana Bent-knee",
+      "categories": [
+        "힙 오프너",
+        "누운 자세"
+      ],
+      "difficulty": "unspecified",
+      "image": null,
+      "imageLicense": null,
+      "imageCredit": null,
+      "sideMode": "none",
+      "defaultBeats": 8,
+      "reviewStatus": "name-needs-review"
+    },
+    {
+      "id": "yoga-supta-padangusthasana-revolving",
+      "sanskrit": "Supta Padangusthasana Revolving",
+      "nameKo": "누워서 다리 비틀기",
+      "nameEn": "Supta Padangusthasana Revolving",
+      "categories": [
+        "힙 오프너",
+        "누운 자세",
+        "트위스트"
+      ],
+      "difficulty": "unspecified",
+      "image": null,
+      "imageLicense": null,
+      "imageCredit": null,
+      "sideMode": "none",
+      "defaultBeats": 8,
+      "reviewStatus": "name-needs-review"
+    },
+    {
+      "id": "yoga-kurmasana",
+      "sanskrit": "Kurmasana",
+      "nameKo": "거북이 자세",
+      "nameEn": "Kurmasana",
+      "categories": [
+        "힙 오프너",
+        "전굴",
+        "고급"
+      ],
+      "difficulty": "advanced",
+      "image": null,
+      "imageLicense": null,
+      "imageCredit": null,
+      "sideMode": "none",
+      "defaultBeats": 8,
+      "reviewStatus": "name-needs-review"
+    },
+    {
+      "id": "yoga-hanumanasana",
+      "sanskrit": "Hanumanasana",
+      "nameKo": "하누만 자세",
+      "nameEn": "Hanumanasana",
+      "categories": [
+        "힙 오프너",
+        "고급"
+      ],
+      "difficulty": "advanced",
+      "image": "/yoga/yoga-hanumanasana.png",
+      "imageLicense": "review-required",
+      "imageCredit": "Yoga API by Alexandre C. — review asset-specific credits",
+      "sideMode": "none",
+      "defaultBeats": 8,
+      "reviewStatus": "name-needs-review",
+      "imageSource": "Yoga API",
+      "imageSourceUrl": "https://res.cloudinary.com/dko1be2jy/image/upload/fl_sanitize/v1676483092/yoga-api/36_a2z20a.png",
+      "imageReviewStatus": "needs-visual-and-license-review"
+    },
+    {
+      "id": "yoga-parighasana",
+      "sanskrit": "Parighasana",
+      "nameKo": "문빗장 자세",
+      "nameEn": "Parighasana",
+      "categories": [
+        "힙 오프너",
+        "무릎 자세",
+        "측면 신장"
+      ],
+      "difficulty": "unspecified",
+      "image": null,
+      "imageLicense": null,
+      "imageCredit": null,
+      "sideMode": "selectable",
+      "defaultBeats": 8,
+      "reviewStatus": "name-needs-review"
+    },
+    {
+      "id": "yoga-parsva-sukhasana",
+      "sanskrit": "Parsva Sukhasana",
+      "nameKo": "앉아 비틀기",
+      "nameEn": "Parsva Sukhasana",
+      "categories": [
+        "트위스트",
+        "앉은 자세"
+      ],
+      "difficulty": "unspecified",
+      "image": null,
+      "imageLicense": null,
+      "imageCredit": null,
+      "sideMode": "selectable",
+      "defaultBeats": 8,
+      "reviewStatus": "name-needs-review"
+    },
+    {
+      "id": "yoga-marichyasana-i",
+      "sanskrit": "Marichyasana I",
+      "nameKo": "현자 마리치 자세 1",
+      "nameEn": "Marichyasana I",
+      "categories": [
+        "트위스트",
+        "전굴",
+        "앉은 자세"
+      ],
+      "difficulty": "unspecified",
+      "image": null,
+      "imageLicense": null,
+      "imageCredit": null,
+      "sideMode": "selectable",
+      "defaultBeats": 8,
+      "reviewStatus": "name-needs-review"
+    },
+    {
+      "id": "yoga-marichyasana-iii",
+      "sanskrit": "Marichyasana III",
+      "nameKo": "현자 마리치 비틀기",
+      "nameEn": "Marichyasana III",
+      "categories": [
+        "트위스트",
+        "앉은 자세"
+      ],
+      "difficulty": "unspecified",
+      "image": null,
+      "imageLicense": null,
+      "imageCredit": null,
+      "sideMode": "selectable",
+      "defaultBeats": 8,
+      "reviewStatus": "name-needs-review"
+    },
+    {
+      "id": "yoga-ardha-matsyendrasana",
+      "sanskrit": "Ardha Matsyendrasana",
+      "nameKo": "반 물고기왕 자세",
+      "nameEn": "Ardha Matsyendrasana",
+      "categories": [
+        "트위스트",
+        "앉은 자세"
+      ],
+      "difficulty": "unspecified",
+      "image": "/yoga/yoga-ardha-matsyendrasana.png",
+      "imageLicense": "review-required",
+      "imageCredit": "Yoga API by Alexandre C. — review asset-specific credits",
+      "sideMode": "selectable",
+      "defaultBeats": 8,
+      "reviewStatus": "name-needs-review",
+      "imageSource": "Yoga API",
+      "imageSourceUrl": "https://res.cloudinary.com/dko1be2jy/image/upload/fl_sanitize/v1676483091/yoga-api/32_hafoa0.png",
+      "imageReviewStatus": "needs-visual-and-license-review"
+    },
+    {
+      "id": "yoga-pasasana",
+      "sanskrit": "Pasasana",
+      "nameKo": "올가미 자세",
+      "nameEn": "Pasasana",
+      "categories": [
+        "트위스트",
+        "스쿼트",
+        "고급"
+      ],
+      "difficulty": "advanced",
+      "image": null,
+      "imageLicense": null,
+      "imageCredit": null,
+      "sideMode": "none",
+      "defaultBeats": 8,
+      "reviewStatus": "name-needs-review"
+    },
+    {
+      "id": "yoga-parivrtta-janu-sirsasana",
+      "sanskrit": "Parivrtta Janu Sirsasana",
+      "nameKo": "회전 머리 무릎 자세",
+      "nameEn": "Parivrtta Janu Sirsasana",
+      "categories": [
+        "트위스트",
+        "전굴",
+        "측면 신장"
+      ],
+      "difficulty": "unspecified",
+      "image": null,
+      "imageLicense": null,
+      "imageCredit": null,
+      "sideMode": "selectable",
+      "defaultBeats": 8,
+      "reviewStatus": "name-needs-review"
+    },
+    {
+      "id": "yoga-parighasana-i",
+      "sanskrit": "Parighasana I",
+      "nameKo": "문빗장 자세 1 변형",
+      "nameEn": "Parighasana I",
+      "categories": [
+        "트위스트",
+        "힙 오프너",
+        "측면 신장"
+      ],
+      "difficulty": "unspecified",
+      "image": null,
+      "imageLicense": null,
+      "imageCredit": null,
+      "sideMode": "selectable",
+      "defaultBeats": 8,
+      "reviewStatus": "name-needs-review"
+    },
+    {
+      "id": "yoga-supine-twist",
+      "sanskrit": "Supine Twist",
+      "nameKo": "누운 척추 비틀기",
+      "nameEn": "Supine Twist",
+      "categories": [
+        "트위스트",
+        "누운 자세",
+        "회복·휴식"
+      ],
+      "difficulty": "unspecified",
+      "image": null,
+      "imageLicense": null,
+      "imageCredit": null,
+      "sideMode": "selectable",
+      "defaultBeats": 8,
+      "reviewStatus": "name-needs-review"
+    },
+    {
+      "id": "yoga-prop-twist",
+      "sanskrit": "Prop Twist",
+      "nameKo": "도구 이용 비틀기",
+      "nameEn": "Prop Twist",
+      "categories": [
+        "트위스트",
+        "회복·휴식"
+      ],
+      "difficulty": "unspecified",
+      "image": null,
+      "imageLicense": null,
+      "imageCredit": null,
+      "sideMode": "none",
+      "defaultBeats": 8,
+      "reviewStatus": "name-needs-review"
+    },
+    {
+      "id": "yoga-parivrtta-utkatasana",
+      "sanskrit": "Parivrtta Utkatasana",
+      "nameKo": "회전 의자 자세",
+      "nameEn": "Parivrtta Utkatasana",
+      "categories": [
+        "트위스트",
+        "스탠딩"
+      ],
+      "difficulty": "unspecified",
+      "image": null,
+      "imageLicense": null,
+      "imageCredit": null,
+      "sideMode": "selectable",
+      "defaultBeats": 8,
+      "reviewStatus": "name-needs-review"
+    },
+    {
+      "id": "yoga-parivrtta-anjaneyasana",
+      "sanskrit": "Parivrtta Anjaneyasana",
+      "nameKo": "회전 런지 자세",
+      "nameEn": "Parivrtta Anjaneyasana",
+      "categories": [
+        "트위스트",
+        "스탠딩",
+        "런지"
+      ],
+      "difficulty": "unspecified",
+      "image": null,
+      "imageLicense": null,
+      "imageCredit": null,
+      "sideMode": "selectable",
+      "defaultBeats": 8,
+      "reviewStatus": "name-needs-review"
+    },
+    {
+      "id": "yoga-parivrtta-prasarita-padottanasana",
+      "sanskrit": "Parivrtta Prasarita Padottanasana",
+      "nameKo": "다리 넓게 벌린 전굴 비틀기",
+      "nameEn": "Parivrtta Prasarita Padottanasana",
+      "categories": [
+        "트위스트",
+        "스탠딩",
+        "전굴"
+      ],
+      "difficulty": "unspecified",
+      "image": null,
+      "imageLicense": null,
+      "imageCredit": null,
+      "sideMode": "selectable",
+      "defaultBeats": 8,
+      "reviewStatus": "name-needs-review"
+    },
+    {
+      "id": "yoga-adho-mukha-svanasana",
+      "sanskrit": "Adho Mukha Svanasana",
+      "nameKo": "다운독",
+      "nameEn": "Adho Mukha Svanasana",
+      "categories": [
+        "암 밸런스",
+        "전굴",
+        "팔 지지"
+      ],
+      "difficulty": "unspecified",
+      "image": "/yoga-photos/downward-dog.jpg",
+      "imageLicense": "CC BY 3.0",
+      "imageCredit": "Iveto",
+      "sideMode": "none",
+      "defaultBeats": 8,
+      "reviewStatus": "name-needs-review",
+      "imageSource": "https://raw.githubusercontent.com/jreinjr/yoga-pose-photos/main/downward-dog.jpg",
+      "imageSourceUrl": "https://res.cloudinary.com/dko1be2jy/image/upload/fl_sanitize/v1676483081/yoga-api/15_vkviqn.png",
+      "imageReviewStatus": "needs-visual-and-license-review"
+    },
+    {
+      "id": "yoga-chaturanga-dandasana",
+      "sanskrit": "Chaturanga Dandasana",
+      "nameKo": "차투랑가",
+      "nameEn": "Chaturanga Dandasana",
+      "categories": [
+        "암 밸런스",
+        "코어",
+        "팔 지지"
+      ],
+      "difficulty": "unspecified",
+      "image": null,
+      "imageLicense": null,
+      "imageCredit": null,
+      "sideMode": "none",
+      "defaultBeats": 8,
+      "reviewStatus": "name-needs-review"
+    },
+    {
+      "id": "yoga-vasisthasana",
+      "sanskrit": "Vasisthasana",
+      "nameKo": "사이드 플랭크",
+      "nameEn": "Vasisthasana",
+      "categories": [
+        "암 밸런스",
+        "코어",
+        "균형"
+      ],
+      "difficulty": "unspecified",
+      "image": "/yoga/yoga-vasisthasana.png",
+      "imageLicense": "review-required",
+      "imageCredit": "Yoga API by Alexandre C. — review asset-specific credits",
+      "sideMode": "selectable",
+      "defaultBeats": 8,
+      "reviewStatus": "name-needs-review",
+      "imageSource": "Yoga API",
+      "imageSourceUrl": "https://res.cloudinary.com/dko1be2jy/image/upload/fl_sanitize/v1676483093/yoga-api/34_qle5tp.png",
+      "imageReviewStatus": "needs-visual-and-license-review"
+    },
+    {
+      "id": "yoga-bakasana",
+      "sanskrit": "Bakasana",
+      "nameKo": "까마귀 자세",
+      "nameEn": "Bakasana",
+      "categories": [
+        "암 밸런스",
+        "고급"
+      ],
+      "difficulty": "advanced",
+      "image": "/yoga/yoga-bakasana.png",
+      "imageLicense": "review-required",
+      "imageCredit": "Yoga API by Alexandre C. — review asset-specific credits",
+      "sideMode": "none",
+      "defaultBeats": 8,
+      "reviewStatus": "name-needs-review",
+      "imageSource": "Yoga API",
+      "imageSourceUrl": "https://res.cloudinary.com/dko1be2jy/image/upload/fl_sanitize/v1676483083/yoga-api/13_hdjxuz.png",
+      "imageReviewStatus": "needs-visual-and-license-review"
+    },
+    {
+      "id": "yoga-eka-pada-bakasana-i",
+      "sanskrit": "Eka Pada Bakasana I",
+      "nameKo": "한 다리 까마귀 자세 1",
+      "nameEn": "Eka Pada Bakasana I",
+      "categories": [
+        "암 밸런스",
+        "고급"
+      ],
+      "difficulty": "advanced",
+      "image": null,
+      "imageLicense": null,
+      "imageCredit": null,
+      "sideMode": "selectable",
+      "defaultBeats": 8,
+      "reviewStatus": "name-needs-review"
+    },
+    {
+      "id": "yoga-eka-pada-bakasana-ii",
+      "sanskrit": "Eka Pada Bakasana II",
+      "nameKo": "한 다리 까마귀 자세 2",
+      "nameEn": "Eka Pada Bakasana II",
+      "categories": [
+        "암 밸런스",
+        "고급"
+      ],
+      "difficulty": "advanced",
+      "image": null,
+      "imageLicense": null,
+      "imageCredit": null,
+      "sideMode": "selectable",
+      "defaultBeats": 8,
+      "reviewStatus": "name-needs-review"
+    },
+    {
+      "id": "yoga-parsva-bakasana",
+      "sanskrit": "Parsva Bakasana",
+      "nameKo": "옆 까마귀 자세",
+      "nameEn": "Parsva Bakasana",
+      "categories": [
+        "암 밸런스",
+        "트위스트",
+        "고급"
+      ],
+      "difficulty": "advanced",
+      "image": null,
+      "imageLicense": null,
+      "imageCredit": null,
+      "sideMode": "selectable",
+      "defaultBeats": 8,
+      "reviewStatus": "name-needs-review"
+    },
+    {
+      "id": "yoga-tittibhasana",
+      "sanskrit": "Tittibhasana",
+      "nameKo": "반딧불 자세",
+      "nameEn": "Tittibhasana",
+      "categories": [
+        "암 밸런스",
+        "힙 오프너",
+        "고급"
+      ],
+      "difficulty": "advanced",
+      "image": null,
+      "imageLicense": null,
+      "imageCredit": null,
+      "sideMode": "none",
+      "defaultBeats": 8,
+      "reviewStatus": "name-needs-review"
+    },
+    {
+      "id": "yoga-bhujapidasana",
+      "sanskrit": "Bhujapidasana",
+      "nameKo": "어깨 압박 자세",
+      "nameEn": "Bhujapidasana",
+      "categories": [
+        "암 밸런스",
+        "힙 오프너",
+        "고급"
+      ],
+      "difficulty": "advanced",
+      "image": null,
+      "imageLicense": null,
+      "imageCredit": null,
+      "sideMode": "none",
+      "defaultBeats": 8,
+      "reviewStatus": "name-needs-review"
+    },
+    {
+      "id": "yoga-astavakrasana",
+      "sanskrit": "Astavakrasana",
+      "nameKo": "여덟 각 자세",
+      "nameEn": "Astavakrasana",
+      "categories": [
+        "암 밸런스",
+        "트위스트",
+        "고급"
+      ],
+      "difficulty": "advanced",
+      "image": null,
+      "imageLicense": null,
+      "imageCredit": null,
+      "sideMode": "none",
+      "defaultBeats": 8,
+      "reviewStatus": "name-needs-review"
+    },
+    {
+      "id": "yoga-kakasana",
+      "sanskrit": "Kakasana",
+      "nameKo": "까마귀 자세 팔 굽힌 변형",
+      "nameEn": "Kakasana",
+      "categories": [
+        "암 밸런스",
+        "고급"
+      ],
+      "difficulty": "advanced",
+      "image": null,
+      "imageLicense": null,
+      "imageCredit": null,
+      "sideMode": "none",
+      "defaultBeats": 8,
+      "reviewStatus": "name-needs-review"
+    },
+    {
+      "id": "yoga-lolasana",
+      "sanskrit": "Lolasana",
+      "nameKo": "매달린 자세",
+      "nameEn": "Lolasana",
+      "categories": [
+        "암 밸런스",
+        "코어",
+        "고급"
+      ],
+      "difficulty": "advanced",
+      "image": null,
+      "imageLicense": null,
+      "imageCredit": null,
+      "sideMode": "none",
+      "defaultBeats": 8,
+      "reviewStatus": "name-needs-review"
+    },
+    {
+      "id": "yoga-tolasana",
+      "sanskrit": "Tolasana",
+      "nameKo": "저울 자세",
+      "nameEn": "Tolasana",
+      "categories": [
+        "암 밸런스",
+        "코어",
+        "고급"
+      ],
+      "difficulty": "advanced",
+      "image": null,
+      "imageLicense": null,
+      "imageCredit": null,
+      "sideMode": "none",
+      "defaultBeats": 8,
+      "reviewStatus": "name-needs-review"
+    },
+    {
+      "id": "yoga-mayurasana",
+      "sanskrit": "Mayurasana",
+      "nameKo": "공작 자세",
+      "nameEn": "Mayurasana",
+      "categories": [
+        "암 밸런스",
+        "고급"
+      ],
+      "difficulty": "advanced",
+      "image": null,
+      "imageLicense": null,
+      "imageCredit": null,
+      "sideMode": "none",
+      "defaultBeats": 8,
+      "reviewStatus": "name-needs-review"
+    },
+    {
+      "id": "yoga-eka-pada-galavasana",
+      "sanskrit": "Eka Pada Galavasana",
+      "nameKo": "날아가는 비둘기 자세",
+      "nameEn": "Eka Pada Galavasana",
+      "categories": [
+        "암 밸런스",
+        "힙 오프너",
+        "고급"
+      ],
+      "difficulty": "advanced",
+      "image": null,
+      "imageLicense": null,
+      "imageCredit": null,
+      "sideMode": "selectable",
+      "defaultBeats": 8,
+      "reviewStatus": "name-needs-review"
+    },
+    {
+      "id": "yoga-eka-hasta-bhujasana",
+      "sanskrit": "Eka Hasta Bhujasana",
+      "nameKo": "한 다리 어깨 걸치기 자세",
+      "nameEn": "Eka Hasta Bhujasana",
+      "categories": [
+        "암 밸런스",
+        "힙 오프너",
+        "고급"
+      ],
+      "difficulty": "advanced",
+      "image": null,
+      "imageLicense": null,
+      "imageCredit": null,
+      "sideMode": "none",
+      "defaultBeats": 8,
+      "reviewStatus": "name-needs-review"
+    },
+    {
+      "id": "yoga-supported-setu-bandha",
+      "sanskrit": "Supported Setu Bandha",
+      "nameKo": "도구로 지지하는 브리지",
+      "nameEn": "Supported Setu Bandha",
+      "categories": [
+        "회복·휴식",
+        "후굴",
+        "누운 자세"
+      ],
+      "difficulty": "unspecified",
+      "image": null,
+      "imageLicense": null,
+      "imageCredit": null,
+      "sideMode": "none",
+      "defaultBeats": 8,
+      "reviewStatus": "name-needs-review"
+    },
+    {
+      "id": "yoga-anjaneyasana",
+      "sanskrit": "Anjaneyasana",
+      "nameKo": "로우 런지",
+      "nameEn": "Anjaneyasana",
+      "categories": [
+        "스탠딩",
+        "런지",
+        "힙 오프너"
+      ],
+      "difficulty": "unspecified",
+      "image": "/yoga/yoga-anjaneyasana.png",
+      "imageLicense": "review-required",
+      "imageCredit": "Yoga API by Alexandre C. — review asset-specific credits",
+      "sideMode": "selectable",
+      "defaultBeats": 8,
+      "reviewStatus": "name-needs-review",
+      "imageSource": "Yoga API",
+      "imageSourceUrl": "https://res.cloudinary.com/dko1be2jy/image/upload/fl_sanitize/v1676483086/yoga-api/23_k2jccj.png",
+      "imageReviewStatus": "needs-visual-and-license-review"
+    },
+    {
+      "id": "yoga-ashta-chandrasana",
+      "sanskrit": "Ashta Chandrasana",
+      "nameKo": "하이 런지",
+      "nameEn": "Ashta Chandrasana",
+      "categories": [
+        "스탠딩",
+        "런지"
+      ],
+      "difficulty": "unspecified",
+      "image": null,
+      "imageLicense": null,
+      "imageCredit": null,
+      "sideMode": "none",
+      "defaultBeats": 8,
+      "reviewStatus": "name-needs-review"
+    },
+    {
+      "id": "yoga-malasana",
+      "sanskrit": "Malasana",
+      "nameKo": "화환 자세",
+      "nameEn": "Malasana",
+      "categories": [
+        "스탠딩",
+        "힙 오프너",
+        "스쿼트"
+      ],
+      "difficulty": "unspecified",
+      "image": "/yoga/yoga-malasana.png",
+      "imageLicense": "review-required",
+      "imageCredit": "Yoga API by Alexandre C. — review asset-specific credits",
+      "sideMode": "none",
+      "defaultBeats": 8,
+      "reviewStatus": "name-needs-review",
+      "imageSource": "Yoga API",
+      "imageSourceUrl": "https://res.cloudinary.com/dko1be2jy/image/upload/fl_sanitize/v1676483093/yoga-api/37_moh7ii.png",
+      "imageReviewStatus": "needs-visual-and-license-review"
+    },
+    {
+      "id": "yoga-urdhva-hastasana",
+      "sanskrit": "Urdhva Hastasana",
+      "nameKo": "위로 팔 뻗기",
+      "nameEn": "Urdhva Hastasana",
+      "categories": [
+        "스탠딩",
+        "기본 정렬"
+      ],
+      "difficulty": "unspecified",
+      "image": null,
+      "imageLicense": null,
+      "imageCredit": null,
+      "sideMode": "none",
+      "defaultBeats": 8,
+      "reviewStatus": "name-needs-review"
+    },
+    {
+      "id": "yoga-ardha-uttanasana",
+      "sanskrit": "Ardha Uttanasana",
+      "nameKo": "반 전굴",
+      "nameEn": "Ardha Uttanasana",
+      "categories": [
+        "스탠딩",
+        "전굴",
+        "기본 정렬"
+      ],
+      "difficulty": "unspecified",
+      "image": null,
+      "imageLicense": null,
+      "imageCredit": null,
+      "sideMode": "selectable",
+      "defaultBeats": 8,
+      "reviewStatus": "name-needs-review"
+    },
+    {
+      "id": "yoga-marjaryasana",
+      "sanskrit": "Marjaryasana",
+      "nameKo": "고양이 자세",
+      "nameEn": "Marjaryasana",
+      "categories": [
+        "척추 움직임",
+        "준비 동작"
+      ],
+      "difficulty": "unspecified",
+      "image": "/yoga/yoga-marjaryasana.png",
+      "imageLicense": "review-required",
+      "imageCredit": "Yoga API by Alexandre C. — review asset-specific credits",
+      "sideMode": "none",
+      "defaultBeats": 8,
+      "reviewStatus": "name-needs-review",
+      "imageSource": "Yoga API",
+      "imageSourceUrl": "https://res.cloudinary.com/dko1be2jy/image/upload/fl_sanitize/v1676483075/yoga-api/7_a6aspg.png",
+      "imageReviewStatus": "needs-visual-and-license-review"
+    },
+    {
+      "id": "yoga-bitilasana",
+      "sanskrit": "Bitilasana",
+      "nameKo": "소 자세",
+      "nameEn": "Bitilasana",
+      "categories": [
+        "척추 움직임",
+        "준비 동작"
+      ],
+      "difficulty": "unspecified",
+      "image": "/yoga/yoga-bitilasana.png",
+      "imageLicense": "review-required",
+      "imageCredit": "Yoga API by Alexandre C. — review asset-specific credits",
+      "sideMode": "none",
+      "defaultBeats": 8,
+      "reviewStatus": "name-needs-review",
+      "imageSource": "Yoga API",
+      "imageSourceUrl": "https://res.cloudinary.com/dko1be2jy/image/upload/fl_sanitize/v1676483077/yoga-api/8_wi10sn.png",
+      "imageReviewStatus": "needs-visual-and-license-review"
+    },
+    {
+      "id": "yoga-bharmanasana",
+      "sanskrit": "Bharmanasana",
+      "nameKo": "테이블 자세",
+      "nameEn": "Bharmanasana",
+      "categories": [
+        "척추 움직임",
+        "준비 동작"
+      ],
+      "difficulty": "unspecified",
+      "image": null,
+      "imageLicense": null,
+      "imageCredit": null,
+      "sideMode": "none",
+      "defaultBeats": 8,
+      "reviewStatus": "name-needs-review"
+    },
+    {
+      "id": "yoga-anahatasana",
+      "sanskrit": "Anahatasana",
+      "nameKo": "퍼피 자세",
+      "nameEn": "Anahatasana",
+      "categories": [
+        "척추 움직임",
+        "후굴",
+        "준비 동작"
+      ],
+      "difficulty": "unspecified",
+      "image": null,
+      "imageLicense": null,
+      "imageCredit": null,
+      "sideMode": "none",
+      "defaultBeats": 8,
+      "reviewStatus": "name-needs-review"
+    },
+    {
+      "id": "yoga-bhujangasana",
+      "sanskrit": "Bhujangasana",
+      "nameKo": "코브라 자세",
+      "nameEn": "Bhujangasana",
+      "categories": [
+        "후굴",
+        "엎드린 자세"
+      ],
+      "difficulty": "unspecified",
+      "image": "/yoga-photos/cobra.jpg",
+      "imageLicense": "CC BY-SA 4.0",
+      "imageCredit": "Iveto",
+      "sideMode": "none",
+      "defaultBeats": 8,
+      "reviewStatus": "name-needs-review",
+      "imageSource": "https://raw.githubusercontent.com/jreinjr/yoga-pose-photos/main/cobra.jpg"
+    },
+    {
+      "id": "yoga-salamba-bhujangasana",
+      "sanskrit": "Salamba Bhujangasana",
+      "nameKo": "스핑크스 자세",
+      "nameEn": "Salamba Bhujangasana",
+      "categories": [
+        "후굴",
+        "엎드린 자세"
+      ],
+      "difficulty": "unspecified",
+      "image": "/yoga/yoga-salamba-bhujangasana.png",
+      "imageLicense": "review-required",
+      "imageCredit": "Yoga API by Alexandre C. — review asset-specific credits",
+      "sideMode": "none",
+      "defaultBeats": 8,
+      "reviewStatus": "name-needs-review",
+      "imageSource": "Yoga API",
+      "imageSourceUrl": "https://res.cloudinary.com/dko1be2jy/image/upload/fl_sanitize/v1676483092/yoga-api/35_dytwvz.png",
+      "imageReviewStatus": "needs-visual-and-license-review"
+    },
+    {
+      "id": "yoga-matsyasana",
+      "sanskrit": "Matsyasana",
+      "nameKo": "물고기 자세",
+      "nameEn": "Matsyasana",
+      "categories": [
+        "후굴",
+        "누운 자세"
+      ],
+      "difficulty": "unspecified",
+      "image": null,
+      "imageLicense": null,
+      "imageCredit": null,
+      "sideMode": "none",
+      "defaultBeats": 8,
+      "reviewStatus": "name-needs-review"
+    },
+    {
+      "id": "yoga-gomukhasana",
+      "sanskrit": "Gomukhasana",
+      "nameKo": "소 얼굴 자세",
+      "nameEn": "Gomukhasana",
+      "categories": [
+        "힙 오프너",
+        "앉은 자세"
+      ],
+      "difficulty": "unspecified",
+      "image": null,
+      "imageLicense": null,
+      "imageCredit": null,
+      "sideMode": "none",
+      "defaultBeats": 8,
+      "reviewStatus": "name-needs-review"
+    },
+    {
+      "id": "yoga-ardha-kapotasana",
+      "sanskrit": "Ardha Kapotasana",
+      "nameKo": "반비둘기 자세",
+      "nameEn": "Ardha Kapotasana",
+      "categories": [
+        "힙 오프너",
+        "앉은 자세"
+      ],
+      "difficulty": "unspecified",
+      "image": null,
+      "imageLicense": null,
+      "imageCredit": null,
+      "sideMode": "selectable",
+      "defaultBeats": 8,
+      "reviewStatus": "name-needs-review"
+    },
+    {
+      "id": "yoga-ananda-balasana",
+      "sanskrit": "Ananda Balasana",
+      "nameKo": "해피 베이비 자세",
+      "nameEn": "Ananda Balasana",
+      "categories": [
+        "힙 오프너",
+        "회복·휴식",
+        "누운 자세"
+      ],
+      "difficulty": "unspecified",
+      "image": null,
+      "imageLicense": null,
+      "imageCredit": null,
+      "sideMode": "none",
+      "defaultBeats": 8,
+      "reviewStatus": "name-needs-review"
+    },
+    {
+      "id": "yoga-agnistambhasana",
+      "sanskrit": "Agnistambhasana",
+      "nameKo": "장작 쌓기 자세",
+      "nameEn": "Agnistambhasana",
+      "categories": [
+        "힙 오프너",
+        "앉은 자세"
+      ],
+      "difficulty": "unspecified",
+      "image": null,
+      "imageLicense": null,
+      "imageCredit": null,
+      "sideMode": "none",
+      "defaultBeats": 8,
+      "reviewStatus": "name-needs-review"
+    },
+    {
+      "id": "yoga-bharadvajasana",
+      "sanskrit": "Bharadvajasana",
+      "nameKo": "바라드바자 비틀기",
+      "nameEn": "Bharadvajasana",
+      "categories": [
+        "트위스트",
+        "앉은 자세"
+      ],
+      "difficulty": "unspecified",
+      "image": null,
+      "imageLicense": null,
+      "imageCredit": null,
+      "sideMode": "none",
+      "defaultBeats": 8,
+      "reviewStatus": "name-needs-review"
+    },
+    {
+      "id": "yoga-jathara-parivartanasana",
+      "sanskrit": "Jathara Parivartanasana",
+      "nameKo": "누워서 무릎 비틀기",
+      "nameEn": "Jathara Parivartanasana",
+      "categories": [
+        "트위스트",
+        "누운 자세",
+        "회복·휴식"
+      ],
+      "difficulty": "unspecified",
+      "image": null,
+      "imageLicense": null,
+      "imageCredit": null,
+      "sideMode": "none",
+      "defaultBeats": 8,
+      "reviewStatus": "name-needs-review"
+    },
+    {
+      "id": "yoga-balasana",
+      "sanskrit": "Balasana",
+      "nameKo": "아기 자세",
+      "nameEn": "Balasana",
+      "categories": [
+        "회복·휴식",
+        "전굴"
+      ],
+      "difficulty": "unspecified",
+      "image": "/yoga-photos/childs-pose.jpg",
+      "imageLicense": "CC BY-SA 4.0",
+      "imageCredit": "Iveto",
+      "sideMode": "none",
+      "defaultBeats": 8,
+      "reviewStatus": "name-needs-review",
+      "imageSource": "https://raw.githubusercontent.com/jreinjr/yoga-pose-photos/main/childs-pose.jpg",
+      "imageSourceUrl": "https://res.cloudinary.com/dko1be2jy/image/upload/fl_sanitize/v1676483079/yoga-api/10_wzpo85.png",
+      "imageReviewStatus": "needs-visual-and-license-review"
+    },
+    {
+      "id": "yoga-savasana",
+      "sanskrit": "Savasana",
+      "nameKo": "송장 자세",
+      "nameEn": "Savasana",
+      "categories": [
+        "회복·휴식",
+        "누운 자세"
+      ],
+      "difficulty": "unspecified",
+      "image": "/yoga/yoga-savasana.png",
+      "imageLicense": "review-required",
+      "imageCredit": "Yoga API by Alexandre C. — review asset-specific credits",
+      "sideMode": "none",
+      "defaultBeats": 8,
+      "reviewStatus": "name-needs-review",
+      "imageSource": "Yoga API",
+      "imageSourceUrl": "https://res.cloudinary.com/dko1be2jy/image/upload/fl_sanitize/v1676483078/yoga-api/11_dczyrp.png",
+      "imageReviewStatus": "needs-visual-and-license-review"
+    },
+    {
+      "id": "yoga-supta-baddha-konasana",
+      "sanskrit": "Supta Baddha Konasana",
+      "nameKo": "누운 나비 자세",
+      "nameEn": "Supta Baddha Konasana",
+      "categories": [
+        "회복·휴식",
+        "누운 자세",
+        "힙 오프너"
+      ],
+      "difficulty": "unspecified",
+      "image": null,
+      "imageLicense": null,
+      "imageCredit": null,
+      "sideMode": "none",
+      "defaultBeats": 8,
+      "reviewStatus": "name-needs-review"
+    },
+    {
+      "id": "yoga-virasana",
+      "sanskrit": "Virasana",
+      "nameKo": "영웅 자세",
+      "nameEn": "Virasana",
+      "categories": [
+        "회복·휴식",
+        "앉은 자세"
+      ],
+      "difficulty": "unspecified",
+      "image": null,
+      "imageLicense": null,
+      "imageCredit": null,
+      "sideMode": "none",
+      "defaultBeats": 8,
+      "reviewStatus": "name-needs-review"
+    },
+    {
+      "id": "yoga-phalakasana",
+      "sanskrit": "Phalakasana",
+      "nameKo": "플랭크 자세",
+      "nameEn": "Phalakasana",
+      "categories": [
+        "코어",
+        "암 밸런스",
+        "팔 지지"
+      ],
+      "difficulty": "unspecified",
+      "image": "/yoga/yoga-phalakasana.png",
+      "imageLicense": "review-required",
+      "imageCredit": "Yoga API by Alexandre C. — review asset-specific credits",
+      "sideMode": "none",
+      "defaultBeats": 8,
+      "reviewStatus": "name-needs-review",
+      "imageSource": "Yoga API",
+      "imageSourceUrl": "https://res.cloudinary.com/dko1be2jy/image/upload/fl_sanitize/v1676483088/yoga-api/26_mxkzlo.png",
+      "imageReviewStatus": "needs-visual-and-license-review"
+    },
+    {
+      "id": "yoga-makara-adho-mukha-svanasana",
+      "sanskrit": "Makara Adho Mukha Svanasana",
+      "nameKo": "팔꿈치 플랭크",
+      "nameEn": "Makara Adho Mukha Svanasana",
+      "categories": [
+        "코어",
+        "암 밸런스",
+        "팔 지지"
+      ],
+      "difficulty": "unspecified",
+      "image": null,
+      "imageLicense": null,
+      "imageCredit": null,
+      "sideMode": "none",
+      "defaultBeats": 8,
+      "reviewStatus": "name-needs-review"
+    },
+    {
+      "id": "yoga-reverse-tabletop",
+      "sanskrit": "Reverse Tabletop",
+      "nameKo": "리버스 테이블 자세",
+      "nameEn": "Reverse Tabletop",
+      "categories": [
+        "코어",
+        "후굴",
+        "팔 지지"
+      ],
+      "difficulty": "unspecified",
+      "image": null,
+      "imageLicense": null,
+      "imageCredit": null,
+      "sideMode": "none",
+      "defaultBeats": 8,
+      "reviewStatus": "name-needs-review"
+    }
+  ]
+}
