@@ -1,3 +1,4 @@
+import CollapsibleTagFilter from './CollapsibleTagFilter';
 import SequenceStepActions from './SequenceStepActions';
 import {duplicateStep} from './sequenceEditing.mjs';
 import {BookmarkScheduleButton} from './ExerciseContext';
@@ -216,7 +217,7 @@ export default function PelvicStudio({ NatureSounds = null }) {
     {tab==='library' && <>
       <div style={{display:'flex',gap:8,marginBottom:10}}><select style={field} value={major} onChange={e=>{setMajor(e.target.value);setActiveTag('전체');}}>{['전체',...Object.keys(STRUCTURE)].map(x=><option key={x}>{x}</option>)}</select></div>
       <input className="pelvic-input" value={search} onChange={e=>setSearch(e.target.value)} style={{...field,marginBottom:10}} placeholder="운동명 · 설명 · 태그 검색"/>
-      <div style={{display:'flex',gap:6,flexWrap:'wrap',marginBottom:12}}>{['전체',...tags].map(t=><button key={t} style={{...btn,padding:'5px 9px',borderRadius:40,background:activeTag===t?'#e4d3f1':'#fff'}} onClick={()=>setActiveTag(t)}>{t==='전체'?t:`#${t}`}</button>)}</div>
+      <CollapsibleTagFilter tags={tags} value={activeTag} onChange={setActiveTag}/>
       <button style={{...btn,marginBottom:12}} onClick={()=>{if(editing){clearEdit();return;}if(major==='전체'){setMajor(Object.keys(STRUCTURE)[0]);}setEditing('new');}}>＋ 새 동작 등록</button>
       {editing && <div style={{...card,marginBottom:14,display:'grid',gap:10}}><strong>{editing==='new'?`${major} 동작 등록`:'운동 수정'}</strong><input className="pelvic-input" style={field} placeholder="동작명" value={form.name} onChange={e=>setForm({...form,name:e.target.value})}/><textarea className="pelvic-input" style={{...field,minHeight:76}} placeholder="설명 / 주의사항 (선택)" value={form.description} onChange={e=>setForm({...form,description:e.target.value})}/><label>기본 시간 (초)<input className="pelvic-input" style={field} type="number" min="1" max="3600" value={form.seconds} onChange={e=>setForm({...form,seconds:e.target.value})}/></label><input className="pelvic-input" style={field} placeholder="태그: 초급, 힙업, 누워서" value={form.tags} onChange={e=>setForm({...form,tags:e.target.value})}/><div><button style={btn} onClick={saveExercise}>저장</button> <button style={btn} onClick={clearEdit}>취소</button></div></div>}
       <div style={{display:'grid',gridTemplateColumns:'repeat(2,minmax(0,1fr))',gap:10}}>{filtered.map(x=><div key={x.id} style={card} className="pelvic-card"><label title={`${x.name} 사진 추가 또는 변경`} style={{aspectRatio:'4/3',background:'#f8f3fb',borderRadius:14,overflow:'hidden',display:'grid',placeItems:'center',cursor:'pointer',position:'relative'}}>
