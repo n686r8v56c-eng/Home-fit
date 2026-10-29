@@ -1,3 +1,4 @@
+import {getCountdownEnabled} from './SequenceMetronome';
 import {speakVoice,stopVoice} from './sequenceSpeech.mjs';
 import {getVoiceVolume} from './SequenceMetronome';
 import SequenceMetronome from './SequenceMetronome';
@@ -91,8 +92,8 @@ export default function BodyweightStudio({ NatureSounds = null }) {
   useEffect(()=>{indexRef.current=playIndex;playRef.current=playIndex>=0;},[playIndex]);
   useEffect(()=>{pausedRef.current=paused;},[paused]);
   const update = patch => {if(!cloudReady)return;dirtyRef.current=true;setData(d=>({...d,...(typeof patch==='function'?patch(d):patch)}));};
-  const voiceSay = (sentence) => {
-    if(!voice || typeof speechSynthesis==='undefined') return;
+  const voiceSay = (sentence, isCountdown=false) => {
+    if((isCountdown?!getCountdownEnabled():!voice) || typeof speechSynthesis==='undefined') return;
     stopVoice();
     const s=new SpeechSynthesisUtterance(sentence);s.lang='ko-KR';s.rate=1.05;s.volume=1;
     const voices=speechSynthesis.getVoices();s.voice=voices.find(v=>v.lang?.toLowerCase().startsWith('ko'))||null;
@@ -111,10 +112,9 @@ export default function BodyweightStudio({ NatureSounds = null }) {
       if(pausedRef.current || !playRef.current) return;
       const n=remainingRef.current-1;
       remainingRef.current=n;setRemain(Math.max(n,0));
-      if(n===5 && !spoken.current.has('five')){
-        spoken.current.add('five');
-        // Say five numbers at a natural, roughly one-second pace.
-        voiceSay('오, 사, 삼, 이, 일');
+      if(n>=1 && n<=5 && getCountdownEnabled() && !spoken.current.has(n)){
+        spoken.current.add(n);
+        voiceSay(['','일','이','삼','사','오'][n],true);
       }
       if(n<=0){
         const next=indexRef.current+1;
