@@ -44,7 +44,7 @@ const fs=require('node:fs'),assert=require('node:assert/strict');
  await body.getByLabel('엉덩이둘레 (cm)',{exact:true}).fill('92');
  await body.getByLabel('허벅지둘레 (cm)',{exact:true}).fill('52');
  await body.getByRole('button',{name:'기록 저장',exact:true}).click();
- await page.waitForFunction(()=>document.querySelector('[role=status]')?.textContent.includes('저장했어요'));
+ await page.waitForFunction(()=>document.querySelector('.bm-page [role=status]')?.textContent.includes('저장했어요'));
  await waitFor(()=>content.hfDashboard.bodyMeasurements.length===5);
  assert.deepEqual(content.hfDashboard.bodyMeasurements.slice(0,4),legacy);
  assert.equal(content.hfDashboard.bodyMeasurements[4].weight,null);
