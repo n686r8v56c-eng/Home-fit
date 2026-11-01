@@ -1,17 +1,8 @@
 import React,{useState} from 'react';
-import {ChevronDown} from 'lucide-react';
+import ProcessGrowth from './ProcessGrowth.jsx';
 import {StrategyPage} from './Dashboard.jsx';
 import './process.css';
 
-const stages=[
- ['learning','학습','Learning'],
- ['execution','실행','Execution'],
- ['outcome','결과','Outcome'],
- ['social','소셜','Social'],
- ['branding','브랜딩','Branding'],
- ['monetization','수익화','Monetization'],
- ['challenge','경쟁','Challenge'],
-];
 const tabs=[['growth','성장 단계'],['strategy','전략'],['analysis','분석']];
 
 export default function ProcessPage(props){
@@ -32,10 +23,7 @@ export default function ProcessPage(props){
    {tabs.map(([id,label],index)=><button key={id} type="button" role="tab" id={`process-tab-${id}`} aria-controls={`process-panel-${id}`} aria-selected={tab===id} tabIndex={tab===id?0:-1} onClick={()=>setTab(id)} onKeyDown={event=>moveTab(event,index)}>{label}</button>)}
   </div>
   <section role="tabpanel" id="process-panel-growth" aria-labelledby="process-tab-growth" hidden={tab!=='growth'}>
-   <div className="process-stages">{stages.map(([id,label,english])=><details key={id} className="process-stage">
-    <summary><span>{label} <small>{english}</small></span><ChevronDown size={16} aria-hidden="true"/></summary>
-    <p>아직 등록된 항목이 없어요.</p>
-   </details>)}</div>
+   <ProcessGrowth {...props} active={props.active&&tab==='growth'}/>
   </section>
   {/* Keep the existing component mounted: its inputs, period and calculations
       continue to use the same record and saveRecord throughout tab switches. */}

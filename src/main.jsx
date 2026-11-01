@@ -79,7 +79,7 @@ export function App({initialData,onDataChange,onLogout,onBridgeSync}){
  return <div className="app"><main>
  <div style={{display:tab==='home'?'block':'none'}}><FocusFlowLink client={supabase} enabled={data.focusFlowShare} onToggle={value=>update(s=>({...s,focusFlowShare:value}))} onSync={onBridgeSync}/></div>
  {tab==='home'&&<DashboardHome {...dashboardProps} getVideo={getVideo} isDone={isDone} onLogout={onLogout}/>}
- <div hidden={tab!=='process'}><ProcessPage {...dashboardProps}/></div>
+ <div hidden={tab!=='process'}><ProcessPage {...dashboardProps} exerciseData={data.exerciseYoga||{}} active={tab==='process'}/></div>
  {tab==='body'&&<BodyMetrics record={record} saveRecord={saveRecord} today={today}/>} 
  {tab==='calendar'&&<DayRecords {...dashboardProps} date={selected} setDate={setSelected} month={month} setMonth={setMonth} getVideo={getVideo} isDone={isDone} onOpenPlan={openWorkout} onScheduleAdd={()=>{setScheduleDate(selected);setTab('exercise');message('Exercise에서 시퀀스를 선택해 일정 추가를 눌러줘.')}}/>}
  {tab==='exercise'&&<><header><h1>Exercise</h1></header><React.Suspense fallback={<p>운동 화면 불러오는 중…</p>}><Exercise onPlayVideo={video=>{update(s=>({...s,exerciseBookmarkVideos:{...(s.exerciseBookmarkVideos||{}),[video.id]:video}}));setPlayingVideo(video)}} localData={data.exerciseYoga||{}} onLocalChange={fn=>update(s=>({...s,exerciseYoga:fn(s.exerciseYoga||{})}))} onSchedule={sequence=>{setScheduleVideo(sequence);setScheduleDate(today);setScheduleKind(sequence.kind);setModal('schedule')}}/></React.Suspense></>}
